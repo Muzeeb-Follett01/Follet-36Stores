@@ -98,8 +98,23 @@ jobs:
           path: test-results/${{ github.event.inputs.store_id }}/
           retention-days: 30
 
+      - name: Verify Jira credentials
+        if: github.event.inputs.upload_to_jira == 'true' && always()
+        run: |
+          if ([string]::IsNullOrEmpty("${{ secrets.JIRA_BASE_URL }}")) {
+            Write-Host "WARNING: JIRA_BASE_URL secret is not set"
+          } else {
+            Write-Host "JIRA_BASE_URL is configured"
+          }
+          if ([string]::IsNullOrEmpty("${{ secrets.JIRA_API_TOKEN }}")) {
+            Write-Host "WARNING: JIRA_API_TOKEN secret is not set"
+          } else {
+            Write-Host "JIRA_API_TOKEN is configured"
+          }
+
       - name: Attach results to Jira
         if: github.event.inputs.upload_to_jira == 'true' && always()
+        continue-on-error: true
         run: |
           npx ts-node --transpile-only scripts/jiraAttach.ts ${{ github.event.inputs.store_id }}
         env:
