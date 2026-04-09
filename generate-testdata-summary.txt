@@ -1,0 +1,191 @@
+===============================================================================
+  FULL END-TO-END AUTOMATION — SUMMARY
+  From Store UI → Test Data Excel → Run Tests → Attach Results to Jira
+===============================================================================
+
+PURPOSE:
+  Automate the entire flow: fetch course/textbook data from a Follett store's
+  live UI, generate a ready-to-use test data Excel, run all 12 Playwright
+  test specs, and attach screenshots/videos to Jira Zephyr Squad.
+
+===============================================================================
+  ONE COMMAND TO DO EVERYTHING
+===============================================================================
+
+  Replace XXXX with store number and adjust URL/password:
+
+  npx ts-node --transpile-only scripts/courseDataFetch.ts https://bkstr-XXXX.myshopify.com/ bkstrXXXX; npx ts-node --transpile-only scripts/minCoverageFilter.ts; npx ts-node --transpile-only scripts/generateTestDataExcel.ts XXXX https://bkstr-XXXX.myshopify.com/ bkstrXXXX; $env:EXCEL_FILE='bkstr-XXXX.xlsx'; npx playwright test; npx ts-node --transpile-only scripts/jiraAttach.ts XXXX
+
+  EXAMPLE (store 1097):
+
+  npx ts-node --transpile-only scripts/courseDataFetch.ts https://bkstr-1097.myshopify.com/ bkstr1097; npx ts-node --transpile-only scripts/minCoverageFilter.ts; npx ts-node --transpile-only scripts/generateTestDataExcel.ts 1097 https://bkstr-1097.myshopify.com/ bkstr1097; $env:EXCEL_FILE='bkstr-1097.xlsx'; npx playwright test; npx ts-node --transpile-only scripts/jiraAttach.ts 1097
+
+===============================================================================
+  WHAT EACH STEP DOES
+===============================================================================
+
+  STEP 1: courseDataFetch.ts
+    - Opens store URL in headless browser
+    - Handles password gate if needed
+    - Calls 3 Shopify/DDCS APIs to fetch campuses, terms, sections, textbooks
+    - Output: output/courseData.json
+
+  STEP 2: minCoverageFilter.ts
+    - Reads courseData.json
+    - Greedy set-cover: picks minimum courses covering all purchase types
+      (buy-new, buy-used, rent-new, rent-used, digital)
+    - Output: output/courseDataMinCoverage.json
+
+  STEP 3: generateTestDataExcel.ts
+    - Reads courseDataMinCoverage.json
+    - Copies bkstr-0026.xlsx as template (112 columns, 13 test cases)
+    - Opens store URL in browser to auto-fetch store logo text
+    - Updates: store.url, store.password, storeLogoText on all rows
+    - Fills courses + courseProducts JSON for 7 test cases
+    - Output: testdata/Follett/bkstr-{storeId}.xlsx
+
+  STEP 4: npx playwright test
+    - Reads the generated Excel via EXCEL_FILE env variable
+    - Runs all 12 specs (TMSHOP-450 through TMSHOP-463)
+    - Each spec picks its row by specId from the Excel
+    - Captures screenshots at key steps + records video
+    - Output: test-results/{storeId}/TMSHOP-XXX/screenshots/ & videos/
+
+  STEP 5: jiraAttach.ts
+    - Reads test-results/{storeId}/ folder
+    - Connects to Jira Zephyr Squad (jira.follett.com)
+    - Creates test executions in Test01 cycle under Unscheduled
+    - Uploads all screenshots (.png) and videos (.webm) per test case
+    - Output: Attachments visible in Jira → TMSHOP → Test Cycles → Test01
+
+===============================================================================
+  THE PROBLEM (Before)
+===============================================================================
+
+  1. Run courseDataFetch.ts → produces output/courseData.json
+  2. Run minCoverageFilter.ts → produces output/courseDataMinCoverage.json
+  3. MANUALLY open courseDataMinCoverage.json
+  4. MANUALLY copy course/textbook data
+  5. MANUALLY paste into the correct rows/columns of the store Excel file
+  6. MANUALLY update store.url, store.password, storeLogoText
+  7. MANUALLY run tests
+  8. MANUALLY upload screenshots/videos to Jira
+
+===============================================================================
+  THE SOLUTION (After) — Fully Automated
+===============================================================================
+
+  1. courseDataFetch.ts         → fetches course data from store UI
+  2. minCoverageFilter.ts      → filters to minimum coverage set
+  3. generateTestDataExcel.ts  → auto-generates Excel + fetches logo
+  4. npx playwright test       → runs all 12 test specs
+  5. jiraAttach.ts             → uploads results to Jira Zephyr Squad
+
+  All manual steps eliminated. One command does everything.
+
+===============================================================================
+  FILES CREATED FOR THIS AUTOMATION
+===============================================================================
+
+  scripts/generateTestDataExcel.ts  — Generates store Excel from course data
+  scripts/jiraAttach.ts             — Uploads test results to Jira
+  jira.env                          — Jira credentials config
+
+  Previously existing (used by this pipeline):
+  scripts/courseDataFetch.ts        — Fetches course data from store UI
+  scripts/minCoverageFilter.ts     — Filters to min coverage set
+
+===============================================================================
+  HOW TO RUN — INDIVIDUAL STEPS
+===============================================================================
+
+  # Step 1: Fetch course data from store UI
+  npx ts-node --transpile-only scripts/courseDataFetch.ts https://bkstr-XXXX.myshopify.com/ bkstrXXXX
+
+  # Step 2: Filter to minimum coverage set
+  npx ts-node --transpile-only scripts/minCoverageFilter.ts
+
+  # Step 3: Generate test data Excel (auto-fetches logo from store)
+  npx ts-node --transpile-only scripts/generateTestDataExcel.ts XXXX https://bkstr-XXXX.myshopify.com/ bkstrXXXX
+
+  # Step 4: Run all 12 test specs with the generated Excel
+  $env:EXCEL_FILE='bkstr-XXXX.xlsx'; npx playwright test
+
+  # Step 5: Attach screenshots/videos to Jira
+  npx ts-node --transpile-only scripts/jiraAttach.ts XXXX
+
+===============================================================================
+  HOW TO RUN — ALL IN ONE COMMAND
+===============================================================================
+
+  npx ts-node --transpile-only scripts/courseDataFetch.ts https://bkstr-XXXX.myshopify.com/ bkstrXXXX; npx ts-node --transpile-only scripts/minCoverageFilter.ts; npx ts-node --transpile-only scripts/generateTestDataExcel.ts XXXX https://bkstr-XXXX.myshopify.com/ bkstrXXXX; $env:EXCEL_FILE='bkstr-XXXX.xlsx'; npx playwright test; npx ts-node --transpile-only scripts/jiraAttach.ts XXXX
+
+  EXAMPLE (store 1097):
+  npx ts-node --transpile-only scripts/courseDataFetch.ts https://bkstr-1097.myshopify.com/ bkstr1097; npx ts-node --transpile-only scripts/minCoverageFilter.ts; npx ts-node --transpile-only scripts/generateTestDataExcel.ts 1097 https://bkstr-1097.myshopify.com/ bkstr1097; $env:EXCEL_FILE='bkstr-1097.xlsx'; npx playwright test; npx ts-node --transpile-only scripts/jiraAttach.ts 1097
+
+===============================================================================
+  SCRIPT ARGUMENTS
+===============================================================================
+
+  generateTestDataExcel.ts <storeId> [storeUrl] [storePassword]
+    storeId       — 4-digit store number, e.g. 0001, 0026, 1097
+    storeUrl      — optional, defaults to https://bkstr-{storeId}.myshopify.com/
+    storePassword — optional, defaults to bkstr{storeId}
+    storeLogoText — auto-fetched from live site (no manual input needed)
+
+  jiraAttach.ts <storeId> [JIRA-TICKET] [cycleName]
+    storeId       — 4-digit store number
+    JIRA-TICKET   — optional, specific ticket or "ALL"
+    cycleName     — optional, defaults to "Test01"
+
+===============================================================================
+  INPUT / OUTPUT FILES
+===============================================================================
+
+  INPUTS:
+    output/courseDataMinCoverage.json  — filtered course data (from Step 2)
+    testdata/Follett/bkstr-0026.xlsx  — template Excel (copied as base)
+    jira.env                          — Jira credentials
+
+  OUTPUTS:
+    testdata/Follett/bkstr-{storeId}.xlsx  — store Excel with all data
+    test-results/{storeId}/TMSHOP-XXX/     — screenshots + videos
+    Jira Zephyr Squad executions           — attachments on test cycles
+
+===============================================================================
+  WHAT GETS AUTO-FILLED IN THE EXCEL (112 columns)
+===============================================================================
+
+  Column              | Source               | Example
+  ------------------- | -------------------- | ---------------------------------
+  store.url           | CLI arg / default    | https://bkstr-1097.myshopify.com/
+  store.password      | CLI arg / default    | bkstr1097
+  storeLogoText       | Auto-fetched from UI | Texas Woman's University Campus Store
+  courses             | courseData JSON       | [{"term":"SPRING 2026",...}]
+  courseProducts       | courseData JSON       | [{"name":"...","format":"print",...}]
+
+  Test cases that get course data filled:
+    TMSHOP-450 (Basic Flow)        → 1 course
+    TMSHOP-453 (Checkout/Ship)     → 1 course
+    TMSHOP-454 (Rental)            → 1 course with rent textbooks
+    TMSHOP-459 (Course Materials)  → 1 course with buy-new
+    TMSHOP-460 (Multiple Courses)  → up to 3 courses
+    TMSHOP-461 (Digital Rental)    → 1 course with digital/rent
+    TMSHOP-462 (Course Materials)  → 1 course
+
+  Remaining 6 specs (UI/search/taxonomy) keep template defaults.
+
+===============================================================================
+  VERIFIED TEST RUN — Store 1097
+===============================================================================
+
+  Command:
+    npx ts-node --transpile-only scripts/generateTestDataExcel.ts 1097 https://bkstr-1097.myshopify.com/ bkstr1097
+
+  Result:
+    ✅ bkstr-1097.xlsx created (14 rows, 112 columns)
+    ✅ Store Logo auto-fetched: "Texas Woman's University Campus Store"
+    ✅ 7 test cases filled with course/textbook data
+    ✅ All rows have correct store.url, store.password, storeLogoText
+
+===============================================================================

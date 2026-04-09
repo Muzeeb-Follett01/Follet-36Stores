@@ -1,0 +1,9 @@
+﻿
+Running 1 test using 1 worker
+ðŸš€ Initialising FollettLoginPage
+ðŸš€ Initialising FollettProductPage
+ðŸš€ Initialising FollettCheckoutPage
+ðŸŒ Navigating to https://bkstr-0026.myshopify.com/
+ðŸ›ï¸  Step 2: Shop By â†’ Clothing & Accessories
+ðŸ¬ Navigating Shop By â†’ Clothing & Accessories
+âš ï¸ Could not save video: video.saveAs: EBUSY: resource busy or locked, copyfile 'C:\follet-rdc\testdata\Follett\37_Stores\Follet-36Stores\.playwright-tmp\.playwright-artifacts-0\1be367a23b510ab25500cb8e2865bc0d.webm' -> 'C:\follet-rdc\testdata\Follett\37_Stores\Follet-36Stores\test-results\0026\TMSHOP-463\videos\TMSHOP-463.webm'

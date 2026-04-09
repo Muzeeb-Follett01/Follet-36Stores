@@ -1,0 +1,22 @@
+node_modules/
+/test-results/
+/.playwright-tmp/
+/notify-results/test-results.xml
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/cucumber-report
+/screenshots
+#/playwright.config.ts
+/execute_fix_reports/
+/tested_scenario_reports/
+
+# Playwright
+/playwright/.auth/
+
+# Large files (exceed GitHub 100MB limit)
+*.zip
+36StoresResults/
+
+# Credentials
+jira.env

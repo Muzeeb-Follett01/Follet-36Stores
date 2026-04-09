@@ -1,0 +1,36 @@
+====================================================================================================
+  FILE 1 — Campus IDs & Term IDs (API #1)
+  Store: 0915
+  Generated: 2026-04-07T10:26:34.479Z
+====================================================================================================
+
+Total Campuses: 2
+Total Terms:    8
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+Campus Name:      Manitoba Institute of Trade and Technology
+Campus Entity ID: 2fb583e0-17e3-4895-bf10-5744e7f40b81
+Store Number:     0915
+Status:           ACTIVE
+
+  Terms (3):
+  Term Name                                     Term ID                                 
+  ─────────────────────────────────────────────────────────────────────────────────────
+  Fall Intake 2025                              b828950b-1425-49ca-8dd4-0862b8dc3fb6    
+  Spring Intake 2025                            5951d73f-36bf-411f-bcbb-7edc50f29a20    
+  Winter Intake 2026                            89b002d7-ad6d-49b2-a2d9-d03e3e1b6617    
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+Campus Name:      UNIV OF WINNIPEG BOOKSTORE
+Campus Entity ID: d4dceef4-0941-4f47-bea9-8a146c6abf7c
+Store Number:     0915
+Status:           ACTIVE
+
+  Terms (5):
+  Term Name                                     Term ID                                 
+  ─────────────────────────────────────────────────────────────────────────────────────
+  Fall Winter 2025 (Full Year Course)           a37462b3-0f21-483c-b3be-6bbd5ac43d48    
+  PACE SPRING SUMMER 2026                       f418c53d-e6c8-46bc-9da8-c992bfdaf736    
+  PACE WINTER 2026                              5286da1d-4609-4891-80eb-bf085ff95f5e    
+  Spring Summer 2026                            2d8b0444-dc0b-47ad-9436-08f3b5ef3d98    
+  WINTER 2026                                   8cdff97c-f451-42be-954e-a79464a56069    

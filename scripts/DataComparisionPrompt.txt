@@ -1,0 +1,46 @@
+Prompt:
+
+I want to create a Playwright test that compares UI/eComm Excel data with DDCS APIs for Store 0915.
+I already have the Excel file at testdata/store0915.xlsx.
+Please generate a Playwright script (.spec.ts) that does the following:
+1. Read the Excel file using exceljs(testdata/Follett/0915-cm-active-titles.xlsx)
+Extract:
+
+Campus list
+Term list
+DDC list
+Section IDs
+Course materials
+
+2. API #1 – Get Campus & Term API
+Call:
+https://winnipeg.bkstr.com/apps/shopifyData/getFilteredCampusTerm
+Compare:
+
+Number of campuses (Excel vs API)
+Number of terms per campus (Excel vs API)
+
+3. API #2 – Get DDCs
+For each campus_entity_id + term_id → call:
+https://winnipeg.bkstr.com/apps/shopifyData/getFilteredData?campus_entity_id=<id>&term_id=<id>
+Compare:
+
+DDC count (Excel vs API)
+
+4. API #3 – Course Materials
+For each section gid:
+Call:
+https://winnipeg.bkstr.com/apps/shopifyData/products?query=metafields.ddcs.ddcs_section:'gid://shopify/<section>'
+Compare:
+
+Number of materials/titles (Excel vs API)
+
+5. Final Output
+Generate a console report summarizing mismatches for:
+
+Campus
+Term
+DDC
+Titles
+
+The script should be clean, modular, use async functions, and follow best Playwright practices.

@@ -1,0 +1,262 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - banner [ref=e3]:
+    - generic [ref=e6]:
+      - link "Alvernia University Bookstore" [ref=e8] [cursor=pointer]:
+        - /url: /
+        - img "Alvernia University Bookstore" [ref=e10]
+      - list
+      - search "Search" [ref=e12]:
+        - search [ref=e13]:
+          - generic [ref=e14]:
+            - generic [ref=e15]:
+              - generic:
+                - img
+              - generic [ref=e16]: Search
+              - combobox "Search" [active] [ref=e17]: Cap
+              - button "Reset search" [ref=e18] [cursor=pointer]:
+                - generic:
+                  - img
+            - button "Close dialog" [ref=e19] [cursor=pointer]: Cancel
+          - listbox "Search results" [expanded] [ref=e22]:
+            - generic [ref=e23]:
+              - status [ref=e24]: Search results for "Cap"
+              - generic [ref=e25]:
+                - heading "Suggestions" [level=4] [ref=e26]:
+                  - generic [ref=e27]: Suggestions
+                - listbox [ref=e28]:
+                  - listitem [ref=e29]:
+                    - link "cap" [ref=e30] [cursor=pointer]:
+                      - /url: /search?q=cap&_pos=1&_psq=Cap&_ss=e&_v=1.0
+                      - generic "cap" [ref=e31]:
+                        - mark [ref=e32]: cap
+                  - listitem [ref=e33]:
+                    - link "caplet" [ref=e34] [cursor=pointer]:
+                      - /url: /search?q=caplet&_pos=2&_psq=Cap&_ss=e&_v=1.0
+                      - generic "caplet" [ref=e35]:
+                        - mark [ref=e36]: cap
+                        - text: let
+                  - listitem [ref=e37]:
+                    - link "cap au lettermark" [ref=e38] [cursor=pointer]:
+                      - /url: /search?q=cap+au+lettermark&_pos=3&_psq=Cap&_ss=e&_v=1.0
+                      - generic "cap au lettermark" [ref=e39]:
+                        - mark [ref=e40]: cap
+                        - text: au lettermark
+                  - listitem [ref=e41]:
+                    - link "caplets" [ref=e42] [cursor=pointer]:
+                      - /url: /search?q=caplets&_pos=4&_psq=Cap&_ss=e&_v=1.0
+                      - generic "caplets" [ref=e43]:
+                        - mark [ref=e44]: cap
+                        - text: lets
+                  - listitem [ref=e45]:
+                    - link "flex cap" [ref=e46] [cursor=pointer]:
+                      - /url: /search?q=flex+cap&_pos=5&_psq=Cap&_ss=e&_v=1.0
+                      - generic "flex cap" [ref=e47]:
+                        - text: flex
+                        - mark [ref=e48]: cap
+                  - listitem [ref=e49]:
+                    - link "flex straw cap" [ref=e50] [cursor=pointer]:
+                      - /url: /search?q=flex+straw+cap&_pos=6&_psq=Cap&_ss=e&_v=1.0
+                      - generic "flex straw cap" [ref=e51]:
+                        - text: flex straw
+                        - mark [ref=e52]: cap
+                  - listitem [ref=e53]:
+                    - link "capitalism" [ref=e54] [cursor=pointer]:
+                      - /url: /search?q=capitalism&_pos=7&_psq=Cap&_ss=e&_v=1.0
+                      - generic "capitalism" [ref=e55]:
+                        - mark [ref=e56]: cap
+                        - text: italism
+                  - listitem [ref=e57]:
+                    - link "capacity" [ref=e58] [cursor=pointer]:
+                      - /url: /search?q=capacity&_pos=8&_psq=Cap&_ss=e&_v=1.0
+                      - generic "capacity" [ref=e59]:
+                        - mark [ref=e60]: cap
+                        - text: acity
+                  - listitem [ref=e61]:
+                    - link "crusaders cap" [ref=e62] [cursor=pointer]:
+                      - /url: /search?q=crusaders+cap&_pos=9&_psq=Cap&_ss=e&_v=1.0
+                      - generic "crusaders cap" [ref=e63]:
+                        - text: crusaders
+                        - mark [ref=e64]: cap
+                  - listitem [ref=e65]:
+                    - link "cap wide" [ref=e66] [cursor=pointer]:
+                      - /url: /search?q=cap+wide&_pos=10&_psq=Cap&_ss=e&_v=1.0
+                      - generic "cap wide" [ref=e67]:
+                        - mark [ref=e68]: cap
+                        - text: wide
+  - main [ref=e69]:
+    - generic [ref=e72]:
+      - generic [ref=e73]:
+        - generic:
+          - button "Previous slide" [ref=e74] [cursor=pointer]:
+            - generic:
+              - img
+          - button "Next slide" [ref=e75] [cursor=pointer]:
+            - generic:
+              - img
+        - generic [ref=e76]:
+          - link [ref=e81] [cursor=pointer]:
+            - /url: /collections/t-shirts-and-tanks?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+          - link [ref=e86] [cursor=pointer]:
+            - /url: /collections/apple?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+      - list [ref=e88]:
+        - listitem [ref=e89]:
+          - button "Slide 1 of 2" [ref=e90] [cursor=pointer]: "1"
+        - listitem [ref=e91]:
+          - button "Slide 2 of 2" [ref=e92] [cursor=pointer]: "2"
+    - iframe [ref=e98]:
+      - generic [ref=f39e1]:
+        - link [ref=f39e2] [cursor=pointer]:
+          - /url: https://googleads.g.doubleclick.net/pcs/click?xai=AKAOjsuImO0GKrcgKacfnuwzt-UeZBstUWw01cE3jAjDzmtkjonDWQVH-0CKYSXjaPs8lF9FPL4MiI4EQ8quzT2GAQ9eWBgk4offc0kEyStga6wS8He5JX8j9j8F-13CMNPI8SpyLaNYdVg3rX4FtiRPsJ_DXBrMth-OnWU8Ez-HYcNpYyVni1W9rioC7aCU4jWJ73blJk80NKAoCbxLbiJ-6G1zyCdS1XolTLQBVoV3k_a0JBTqgfYixN2uwk6OvLkffu3zKbiyk5tBJ9uNJQ2N5FfwoB1QfAmSGV1nKH8jG5bkbAAO77HhcZIzdD5BV6DCPDXzz_QT7651KnMyciScbazZ3xgrAQHc3Tlz7m03PhaH7wDx62EqvievaAW6dSfEv5jnWuHAe0qORC4IgJRWPEpu9-aylQDU40kV_A&sai=AMfl-YR1LRTJ8FKlUrXHxia7XebM2WRUtU2M5wUFMy3ezwuiBx61Ag5U9TziIwTTrFSoiyI2hfxydVkpWQY2uB33YTpeRd_yw4Oz55xB6uXCMtVGU1CzKKmRuhTraCVlppELVFVJzTRKaNZw8Guvy51THtr27svPnn3I9DT2-cGenWfL10txPusAK8A_Uwiz7ru3PkaxISf_m0MEWlyGgINJGQfl7UpEyXLG12CvHw09zKEHDU1k2R5sHxATi6edGzosX5LVZIfpmv-Xul3aIVIaTNqF-nkSGavc2wsxbQh1WdsJPU-qGkqAo2K5qkceMVpfVR_5qVkqy33zgYXcX9dAeE5fHNuCgRU&sig=Cg0ArKJSzHXTc_Ar7Ikf&fbs_aeid=%5Bgw_fbsaeid%5D&adurl=https://t23h.adj.st%3Fadj_t%3D1iovzpza%26adj_campaign%3DInStore%26adj_adgroup%3DFollettDigital
+        - img [ref=f39e6] [cursor=pointer]
+        - button [ref=f39e9] [cursor=pointer]:
+          - img [ref=f39e10]
+    - generic [ref=e103]:
+      - article [ref=e104]:
+        - heading "Alvernia University Bookstore" [level=2] [ref=e105]
+        - generic [ref=e107]:
+          - generic [ref=e108]: 418 Veronica Commons
+          - generic [ref=e109]: Student Center, Reading, PA 19607-1799
+        - generic [ref=e110]:
+          - heading "Store Hours" [level=3] [ref=e111]
+          - generic [ref=e112]:
+            - generic [ref=e113]:
+              - generic [ref=e114]: Monday - Friday
+              - generic [ref=e115]: 9:30am - 4:00pm
+            - generic [ref=e116]:
+              - generic [ref=e117]: Saturday
+              - generic [ref=e118]: 10:00am - 4:00pm
+            - generic [ref=e119]:
+              - generic [ref=e120]: Sunday
+              - generic [ref=e121]: Closed
+        - generic [ref=e122]:
+          - img [ref=e123]
+          - link "(610) 796-8252" [ref=e125] [cursor=pointer]:
+            - /url: tel:6107968252
+        - generic [ref=e126]:
+          - img [ref=e127]
+          - link "alvernia@bkstr.com" [ref=e130] [cursor=pointer]:
+            - /url: mailto:alvernia@bkstr.com
+      - generic [ref=e131]:
+        - iframe [ref=e132]:
+          
+        - generic [ref=e133]:
+          - img [ref=e135]
+          - link "Open In Maps" [ref=e138] [cursor=pointer]:
+            - /url: https://maps.google.com/?q=418%20Veronica%20Commons%2C%20Student%20Center%2C%20Reading%2C%20PA%2019607-1799
+    - iframe [ref=e144]:
+      - generic [ref=f40e1]:
+        - link [ref=f40e2] [cursor=pointer]:
+          - /url: https://googleads.g.doubleclick.net/pcs/click?xai=AKAOjssH5F7piQUDL41zkMS5B_k58vvR06L0N0MLIxOTjEAycoInEnVu-ofy4l8LDMg2E0Zsh_BD-vufN1s3GV8ke-lwNNnHHf2NcMtBXf-n_WFuIqa9SE1zTGMLZjk-phd3211DXB2wmK9g9PylXUUJcxw_INU_cociLRFwF9NS9Fng0BbYT5VcHHAXLrjf1lViueApvlWKLBdkd4qDnzRxtrIVn6972_Aa7aauT8P96ObodbGb10rvV4ReZGj5S_3KhSMNNxZFOpZ7m7Gp7_ovyQj7Y9nlFQDdVtkTLQVcR6PY0cvBY82QHj7cyaybTJ2B6JkFDepPuGfcgxbUTT_xcOehvm7usJMp6ebujqI2Ma2whl173LTIBlbY1X4xCnlc-3-JXcbGe2tMiPRD3GroKsFEBdjqSQJ22ncueJi1pQ&sai=AMfl-YSDX_XebYLMZjJbfjMbf7NynB32yfs5DFBdsyGS-LpsN9LWDB6WXVI92MVEra05C-OqzTCMyAJqzVdY_P6UdGjpdOpoo84vYjDMgSSZhvykGu6QYTsxfYv-f2-9bWwhpRKpMg1EPkKAb8DUWt0y2m6-3fDMmBNYjPcG9ShUPQPDIVNFf4jVyxsMtudw_PW5h3J2047bldjKuwyB1kEWf-DRPGeYqBw_5gtnA2s_GHIxAlHbN6FDuXrRqKhyOgE1ZMmB9Tt-vXywYcTDimVU9OypSXcnRR3nZuTTVyIXOD4f25DgKCTP8kr93Zcq8sRWkQgDFM7o_XomnUeTrWyScBX62ffZPCQ&sig=Cg0ArKJSzClFtuAFnlWH&fbs_aeid=%5Bgw_fbsaeid%5D&adurl=https://t23h.adj.st%3Fadj_t%3D1iovzpza%26adj_campaign%3DInStore%26adj_adgroup%3DFollettDigital
+        - img [ref=f40e6] [cursor=pointer]
+        - button [ref=f40e9] [cursor=pointer]:
+          - img [ref=f40e10]
+  - generic [ref=e148]:
+    - img "Campus logo" [ref=e151]
+    - generic [ref=e153]:
+      - heading "Every purchase directly benefits the campus community." [level=2] [ref=e154]
+      - paragraph [ref=e155]: From student scholarships, to new programs, your dollars make a difference in shaping a brighter academic future.
+  - contentinfo [ref=e156]:
+    - generic [ref=e162]:
+      - generic [ref=e163]:
+        - img "Alvernia University" [ref=e165]
+        - generic [ref=e166]:
+          - generic [ref=e167]: Join Our Email List & Get 10% Off
+          - generic [ref=e168]: Get exclusive deals and early access to new products.
+          - generic [ref=e169]:
+            - generic [ref=e170]: Email
+            - generic [ref=e171]:
+              - textbox "Email" [ref=e172]:
+                - /placeholder: Enter your email
+              - button "Subscribe" [ref=e173] [cursor=pointer]
+            - paragraph [ref=e174]:
+              - text: By providing my email, I accept the
+              - link "Terms of Use" [ref=e175] [cursor=pointer]:
+                - /url: https://follett.com/terms-of-use/
+              - text: ","
+              - link "Privacy Policy" [ref=e176] [cursor=pointer]:
+                - /url: https://follett.com/policies/
+              - text: ", and"
+              - link "Cookie Preference Policy" [ref=e177] [cursor=pointer]:
+                - /url: "#"
+              - text: .
+          - generic:
+            - generic:
+              - img
+              - generic: Thanks for subscribing!
+              - button "Close": ×
+      - generic [ref=e178]:
+        - generic [ref=e179]:
+          - heading "Address" [level=3] [ref=e180]
+          - generic [ref=e181]: 418 Veronica Commons, Student Center, Reading, PA 19607-1799
+          - link "(610) 796-8252" [ref=e183] [cursor=pointer]:
+            - /url: tel:6107968252
+          - link "alvernia@bkstr.com" [ref=e185] [cursor=pointer]:
+            - /url: mailto:alvernia@bkstr.com
+        - group [ref=e187]:
+          - generic "Company" [ref=e188]:
+            - heading "Company" [level=3] [ref=e189]
+          - list [ref=e191]:
+            - listitem [ref=e192]:
+              - link "View Store Hours" [ref=e193] [cursor=pointer]:
+                - /url: /pages/view-store-hours
+            - listitem [ref=e194]:
+              - link "Contact" [ref=e195] [cursor=pointer]:
+                - /url: /pages/contact
+        - group [ref=e197]:
+          - generic "Textbooks" [ref=e198]:
+            - heading "Textbooks" [level=3] [ref=e199]
+          - list [ref=e201]:
+            - listitem [ref=e202]:
+              - link "Find Your Textbooks" [ref=e203] [cursor=pointer]:
+                - /url: /pages/course-materials-results
+            - listitem [ref=e204]:
+              - link "Sell Your Textbooks" [ref=e205] [cursor=pointer]:
+                - /url: /pages/faq-sell-your-textbooks
+            - listitem [ref=e206]:
+              - link "Textbook FAQs" [ref=e207] [cursor=pointer]:
+                - /url: /pages/faq-textbooks
+            - listitem [ref=e208]:
+              - link "In-Store Price Match Guarantee" [ref=e209] [cursor=pointer]:
+                - /url: /pages/price-match-guarantee
+            - listitem [ref=e210]:
+              - link "Register for Text Rental" [ref=e211] [cursor=pointer]:
+                - /url: /pages/faq-rentals
+        - group [ref=e213]:
+          - generic "Support" [ref=e214]:
+            - heading "Support" [level=3] [ref=e215]
+          - list [ref=e217]:
+            - listitem [ref=e218]:
+              - link "Track an Order" [ref=e219] [cursor=pointer]:
+                - /url: /account/orders
+            - listitem [ref=e220]:
+              - link "Delivery Options" [ref=e221] [cursor=pointer]:
+                - /url: /pages/faq-shipping-delivery
+            - listitem [ref=e222]:
+              - link "Payments Accepted" [ref=e223] [cursor=pointer]:
+                - /url: /pages/faq-orders
+            - listitem [ref=e224]:
+              - link "Returns" [ref=e225] [cursor=pointer]:
+                - /url: /pages/faq-online-return-policy
+            - listitem [ref=e226]:
+              - link "Help/FAQ" [ref=e227] [cursor=pointer]:
+                - /url: /pages/faq
+            - listitem [ref=e228]:
+              - link "Accessibility" [ref=e229] [cursor=pointer]:
+                - /url: /pages/faq-accessibility-browser-support
+      - generic [ref=e231]:
+        - generic [ref=e232]: © 2026 Follett Higher Education
+        - generic [ref=e233]:
+          - link "Terms of Use" [ref=e234] [cursor=pointer]:
+            - /url: https://follett.com/terms-of-use/
+          - link "Privacy Policy" [ref=e235] [cursor=pointer]:
+            - /url: https://follett.com/policies/
+          - link "Do Not Sell My Info – CA" [ref=e236] [cursor=pointer]:
+            - /url: https://privacyportal-cdn.onetrust.com/dsarwebform/d874582a-c10e-4b93-bdba-7f74cfaded74/c11baae7-b240-4c76-bea2-737c15a7fb2a.html
+          - link "Cookie Preference Policy" [ref=e237] [cursor=pointer]:
+            - /url: javascript:OneTrust.ToggleInfoDisplay()
+        - link "Site Map" [ref=e239] [cursor=pointer]:
+          - /url: /pages/sitemap
+```

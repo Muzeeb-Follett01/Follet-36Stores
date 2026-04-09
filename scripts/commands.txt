@@ -1,0 +1,15 @@
+npx ts-node --transpile-only scripts/courseDataFetch.ts https://bkstr-1097.myshopify.com/ bkstr1097
+
+npx ts-node --transpile-only scripts/minCoverageFilter.ts
+
+# Generate test data Excel from fetched course data
+npx ts-node --transpile-only scripts/generateTestDataExcel.ts 0001 https://bkstr-0001.myshopify.com/ bkstr0001
+
+# Full pipeline: fetch → filter → generate Excel (replace storeId/url/password)
+# npx ts-node --transpile-only scripts/courseDataFetch.ts https://bkstr-0001.myshopify.com/ bkstr0001 && npx ts-node --transpile-only scripts/minCoverageFilter.ts && npx ts-node --transpile-only scripts/generateTestDataExcel.ts 0001 https://bkstr-0001.myshopify.com/ bkstr0001
+
+# Attach test screenshots & videos to Jira tickets
+# All tickets for store 0026:
+npx ts-node --transpile-only scripts/jiraAttach.ts 0026
+# Single ticket only:
+npx ts-node --transpile-only scripts/jiraAttach.ts 0026 TMSHOP-455

@@ -1,0 +1,236 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - banner [ref=e3]:
+    - generic [ref=e6]:
+      - link "La Salle University Shop" [ref=e8] [cursor=pointer]:
+        - /url: /
+        - img "La Salle University Shop" [ref=e10]
+      - navigation [ref=e14]:
+        - generic [ref=e16]:
+          - list:
+            - generic:
+              - link "Shop By" [active] [ref=e17] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=e18]: Shop By
+              - link "New Arrivals" [ref=e19] [cursor=pointer]:
+                - /url: /collections/new-arrivals?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                - generic [ref=e20]: New Arrivals
+              - link [ref=e21] [cursor=pointer]:
+                - /url: /collections/new-arrivals
+                - text: New Arrivals
+              - link "Men" [ref=e22] [cursor=pointer]:
+                - /url: /collections/men?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                - generic [ref=e23]: Men
+              - link [ref=e24] [cursor=pointer]:
+                - /url: /collections/men
+                - text: Men
+              - link "Women" [ref=e25] [cursor=pointer]:
+                - /url: /collections/women?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                - generic [ref=e26]: Women
+              - link [ref=e27] [cursor=pointer]:
+                - /url: /collections/women
+                - text: Women
+              - link "Headwear" [ref=e28] [cursor=pointer]:
+                - /url: /collections/hats?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                - generic [ref=e29]: Headwear
+              - link [ref=e30] [cursor=pointer]:
+                - /url: /collections/hats
+                - text: Headwear
+              - link "Gifts" [ref=e31] [cursor=pointer]:
+                - /url: /collections/gifts?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                - generic [ref=e32]: Gifts
+              - link [ref=e33] [cursor=pointer]:
+                - /url: /collections/gifts
+                - text: Gifts
+              - link "Textbooks" [ref=e34] [cursor=pointer]:
+                - /url: /pages/courses-materials-results
+                - generic [ref=e36]:
+                  - text: Textbooks
+                  - img
+      - generic [ref=e37]:
+        - search "Search" [ref=e40]:
+          - search [ref=e41]:
+            - generic [ref=e43]:
+              - generic:
+                - img
+              - generic [ref=e44]: Search
+              - combobox "Search" [ref=e45]
+        - generic [ref=e46]:
+          - button "Open account menu" [ref=e48] [cursor=pointer]:
+            - img [ref=e50]
+          - 'button "Open bag Total items in bag: 0" [ref=e54] [cursor=pointer]':
+            - generic [ref=e55]:
+              - generic:
+                - img
+              - generic [ref=e56]:
+                - status:
+                  - generic [ref=e58]: "Total items in bag: 0"
+  - main [ref=e59]:
+    - generic [ref=e62]:
+      - generic [ref=e63]:
+        - generic:
+          - button "Previous slide" [ref=e64] [cursor=pointer]:
+            - generic:
+              - img
+          - button "Next slide" [ref=e65] [cursor=pointer]:
+            - generic:
+              - img
+        - generic [ref=e66]:
+          - link [ref=e71] [cursor=pointer]:
+            - /url: /collections/t-shirts-and-tanks?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+          - link [ref=e76] [cursor=pointer]:
+            - /url: /collections/apple?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+      - list [ref=e78]:
+        - listitem [ref=e79]:
+          - button "Slide 1 of 2" [ref=e80] [cursor=pointer]: "1"
+        - listitem [ref=e81]:
+          - button "Slide 2 of 2" [ref=e82] [cursor=pointer]: "2"
+    - iframe [ref=e88]:
+      - generic [ref=f40e1]:
+        - link [ref=f40e2] [cursor=pointer]:
+          - /url: https://googleads.g.doubleclick.net/pcs/click?xai=AKAOjsulhi7X0LUqQeDnYOBWpBFKK77pUarFrLbCJMfXxsL14DetA_mBNnPNDqx8WwtV5MhhsexPEw0QwN1zG0mvd2yd9lc6sPauq-Q848K-4ISc0L2zLbe0sbQ1GdSyi_LxjEXPjSJtjmbJbL7u3JCy9wEfn4EnRm5Zayq4EQs-0hD8ezrQrU7DitkxOssfF5BKs_IZyuA2TDP9jUygS3lEwtuH1MK36Fff58KsQ6CUZZDoXECD3LCeiFB6LS-Fw35BFu53GDZUfT6MUnDrfcBR0bHvYbzD3U_jMnOW1YJmVFvkV-0jeWdIXagyDop4Jx4f383E-HkV5ClHHpzYDKeYWiOsbz0z3VqfjhV94BIVDKQ8YKq1ltVB9sGiAlqcLAFc6t0-GOV7lnQSpmtIyeZomgmwM72GmldflZyHDg&sai=AMfl-YQxo6XjFjaBVMQ50oPZlCg3u7MRS7dyJrTbp2uHzrNw3wtTiS8yXTTDN0cj2TsqPvfNoL3HJx0aNTB3NuHR6HV9eZluONmYSBt1RsX2vT9tTki6Gv3uUAJXR5qllPUrQSq0hPPwPHCz_p8nK98m2lQW90czI1-Yi-jDqt1-tAfImVnbsyotVcbXIUb4szg_QpuICa7ljLEj-SNMwrRBcThguLdIdAnnx6M6JdX7-gyBCep25FC-zjAfLq8cv4zyVo3_7ev_5XatGFpqvHsHNmHfhQSDkdeFt7aFTrdMpsnLR6pVrGMOzVsX67vkLaBR0XFJu_rOf0umoFtKTPrZpf6Ak8r6MuE&sig=Cg0ArKJSzJq4uy2Rrm5q&fbs_aeid=%5Bgw_fbsaeid%5D&adurl=https://t23h.adj.st%3Fadj_t%3D1iovzpza%26adj_campaign%3DInStore%26adj_adgroup%3DFollettDigital
+        - img [ref=f40e6] [cursor=pointer]
+        - button [ref=f40e9] [cursor=pointer]:
+          - img [ref=f40e10]
+    - generic [ref=e93]:
+      - article [ref=e94]:
+        - heading "La Salle University Store" [level=2] [ref=e95]
+        - generic [ref=e97]:
+          - generic [ref=e98]: 1900 West Olney Avenue
+          - generic [ref=e99]: Wister Hall, Philadelphia, PA 19141
+        - generic [ref=e100]:
+          - heading "Store Hours" [level=3] [ref=e101]
+          - generic [ref=e102]:
+            - generic [ref=e103]:
+              - generic [ref=e104]: Monday - Friday
+              - generic [ref=e105]: 9:00am - 4:00pm
+            - generic [ref=e106]:
+              - generic [ref=e107]: Saturday - Sunday
+              - generic [ref=e108]: Closed
+        - generic [ref=e109]:
+          - img [ref=e110]
+          - link "2159511395" [ref=e112] [cursor=pointer]:
+            - /url: tel:2159511395
+      - generic [ref=e113]:
+        - iframe [ref=e114]:
+          
+        - generic [ref=e115]:
+          - img [ref=e117]
+          - link "Open In Maps" [ref=e120] [cursor=pointer]:
+            - /url: https://maps.google.com/?q=1900%20West%20Olney%20Avenue%2C%20Wister%20Hall%2C%20Philadelphia%2C%20PA%2019141
+    - iframe [ref=e126]:
+      - generic [ref=f41e1]:
+        - link [ref=f41e2] [cursor=pointer]:
+          - /url: https://googleads.g.doubleclick.net/pcs/click?xai=AKAOjstjGo2LqcBCOyRpQMp-u83WRHJMRWJjPZ2lKEQlNKEtGV0GA8uUyXfL27I_vhcSHlvqf5oB6kH2qAmQjpUbXakpNGkSQmd928oDMWFFcBdLNga-QEweNttxviuADsQY147wCUF8y1J9rPE_60p3G3JNOfUkQrY0iccuW-Hrug3lvLQtUuKPLyKqQGfP04Rczr0yidTtTUvk0gaSAhIzYfCI-IsxFDQl5PoQqEwS838F4EqBJA6Aqmo8JW8_bjBOXWpzrtmO4ewcS1bJEn48S_0-dKX8qRObXAxVBk2IhTQLcwRHvKjxWBpytzEsqNZ52bGkRZlvHl-MBXzSpdAVwETHIo1JN_WN0JxYLigTm2wEXIShUev32VZyK7eSsjaQ4EsdfPxQP9Z52F8J3li37VFfYKa4lO8Z8tnsY2Uvng&sai=AMfl-YTi7zLmoYG7HekJxeTXTTbSgBsbeMDYSKnPGTw3NgoIWRNYsKeab9tk6cipk3PvVVco_hmdxx4AMe4a0mq-zsOOUyod41DfD3b5O-48Ilk_GU_lmSh0ftGn047LIvc3s8E-DfwA-kzYQBJrHlsnGVVxDu3oqQXe7J-Di6BZDk6oquJmDYhe-vvFzKFdmcWrNhnAY2SGK-5lVKpr_vB4keqE7NCA8xHpQy_amEgS-QiHlFV4IFx1QOSDGnyqAuGWnxXItKJ8a3wUMbaLw-cF-HUh11zT0Od-UFaZOFkGq4DPIJNMBOF8xurVdS-y4ztBudA7vx7ClnX4YzFAkGhA1gDyeKSGlAU&sig=Cg0ArKJSzJeQmzLMC__p&fbs_aeid=%5Bgw_fbsaeid%5D&adurl=https://t23h.adj.st%3Fadj_t%3D1iovzpza%26adj_campaign%3DInStore%26adj_adgroup%3DFollettDigital
+        - img [ref=f41e6] [cursor=pointer]
+        - button [ref=f41e9] [cursor=pointer]:
+          - img [ref=f41e10]
+  - generic [ref=e130]:
+    - img "Campus logo" [ref=e133]
+    - generic [ref=e135]:
+      - heading "Every purchase directly benefits the campus community." [level=2] [ref=e136]
+      - paragraph [ref=e137]: From student scholarships, to new programs, your dollars make a difference in shaping a brighter academic future.
+  - contentinfo [ref=e138]:
+    - generic [ref=e144]:
+      - generic [ref=e145]:
+        - img "La Salle University" [ref=e147]
+        - generic [ref=e148]:
+          - generic [ref=e149]: Join Our Email List & Get 10% Off
+          - generic [ref=e150]: Get exclusive deals and early access to new products.
+          - generic [ref=e151]:
+            - generic [ref=e152]: Email
+            - generic [ref=e153]:
+              - textbox "Email" [ref=e154]:
+                - /placeholder: Enter your email
+              - button "Subscribe" [ref=e155] [cursor=pointer]
+            - paragraph [ref=e156]:
+              - text: By providing my email, I accept the
+              - link "Terms of Use" [ref=e157] [cursor=pointer]:
+                - /url: https://follett.com/terms-of-use/
+              - text: ","
+              - link "Privacy Policy" [ref=e158] [cursor=pointer]:
+                - /url: https://follett.com/policies/
+              - text: ", and"
+              - link "Cookie Preference Policy" [ref=e159] [cursor=pointer]:
+                - /url: "#"
+              - text: .
+          - generic:
+            - generic:
+              - img
+              - generic: Thanks for subscribing!
+              - button "Close": ×
+      - generic [ref=e160]:
+        - generic [ref=e161]:
+          - heading "Address" [level=3] [ref=e162]
+          - generic [ref=e163]: 1900 West Olney Avenue, Wister Hall, Philadelphia, PA 19141
+          - link "2159511395" [ref=e165] [cursor=pointer]:
+            - /url: tel:2159511395
+          - link "tcu@bkstr.com" [ref=e167] [cursor=pointer]:
+            - /url: mailto:tcu@bkstr.com
+        - group [ref=e169]:
+          - generic "Company" [ref=e170]:
+            - heading "Company" [level=3] [ref=e171]
+          - list [ref=e173]:
+            - listitem [ref=e174]:
+              - link "View Store Hours" [ref=e175] [cursor=pointer]:
+                - /url: /pages/view-store-hours
+            - listitem [ref=e176]:
+              - link "Contact" [ref=e177] [cursor=pointer]:
+                - /url: /pages/contact
+        - group [ref=e179]:
+          - generic "Textbooks" [ref=e180]:
+            - heading "Textbooks" [level=3] [ref=e181]
+          - list [ref=e183]:
+            - listitem [ref=e184]:
+              - link "Find Your Textbooks" [ref=e185] [cursor=pointer]:
+                - /url: /pages/course-materials-results
+            - listitem [ref=e186]:
+              - link "Sell Your Textbooks" [ref=e187] [cursor=pointer]:
+                - /url: /pages/faq-sell-your-textbooks
+            - listitem [ref=e188]:
+              - link "Textbook FAQs" [ref=e189] [cursor=pointer]:
+                - /url: /pages/faq-textbooks
+            - listitem [ref=e190]:
+              - link "In-Store Price Match Guarantee" [ref=e191] [cursor=pointer]:
+                - /url: /pages/price-match-guarantee
+            - listitem [ref=e192]:
+              - link "Register for Text Rental" [ref=e193] [cursor=pointer]:
+                - /url: /pages/faq-rentals
+        - group [ref=e195]:
+          - generic "Support" [ref=e196]:
+            - heading "Support" [level=3] [ref=e197]
+          - list [ref=e199]:
+            - listitem [ref=e200]:
+              - link "Track an Order" [ref=e201] [cursor=pointer]:
+                - /url: /account/orders
+            - listitem [ref=e202]:
+              - link "Delivery Options" [ref=e203] [cursor=pointer]:
+                - /url: /pages/faq-shipping-delivery
+            - listitem [ref=e204]:
+              - link "Payments Accepted" [ref=e205] [cursor=pointer]:
+                - /url: /pages/faq-orders
+            - listitem [ref=e206]:
+              - link "Returns" [ref=e207] [cursor=pointer]:
+                - /url: /pages/faq-online-return-policy
+            - listitem [ref=e208]:
+              - link "Help/FAQ" [ref=e209] [cursor=pointer]:
+                - /url: /pages/faq
+            - listitem [ref=e210]:
+              - link "Accessibility" [ref=e211] [cursor=pointer]:
+                - /url: /pages/faq-accessibility-browser-support
+      - generic [ref=e213]:
+        - generic [ref=e214]: © 2026 Follett Higher Education
+        - generic [ref=e215]:
+          - link "Terms of Use" [ref=e216] [cursor=pointer]:
+            - /url: https://follett.com/terms-of-use/
+          - link "Privacy Policy" [ref=e217] [cursor=pointer]:
+            - /url: https://follett.com/policies/
+          - link "Do Not Sell My Info – CA" [ref=e218] [cursor=pointer]:
+            - /url: https://privacyportal-cdn.onetrust.com/dsarwebform/d874582a-c10e-4b93-bdba-7f74cfaded74/c11baae7-b240-4c76-bea2-737c15a7fb2a.html
+          - link "Cookie Preference Policy" [ref=e219] [cursor=pointer]:
+            - /url: javascript:OneTrust.ToggleInfoDisplay()
+        - link "Site Map" [ref=e221] [cursor=pointer]:
+          - /url: /pages/sitemap
+```

@@ -1,0 +1,252 @@
+trigger:
+  branches:
+    include:
+      - main
+
+parameters:
+  - name: test_name
+    displayName: "Test Name"
+    type: string
+    default: "Playwright Test"
+  - name: environment
+    displayName: "Environment"
+    type: string
+    default: "QA"
+  - name: execution_mode
+    displayName: "Execution Mode"
+    type: string
+    default: "local"
+  - name: config_to_run
+    displayName: "Playwright Project (chromium|firefox|webkit|custom)"
+    type: string
+    default: "Google Chrome"
+  - name: files_to_run
+    displayName: "Single test file to run (exact path)"
+    type: string
+    default: "tests/features/Salesforce/IntegrationTest/campaign_leadsContactsOpportunities.feature"
+
+variables:
+  NODE_OPTIONS: ""
+
+jobs:
+- job: PlaywrightJob
+  displayName: Playwright Tests
+  pool:
+    vmImage: 'windows-latest'
+
+  steps:
+  - checkout: self
+    fetchDepth: 1
+
+  # ✅ Use Node 20.x
+  - task: NodeTool@0
+    displayName: 'Use Node 20.x'
+    inputs:
+      versionSpec: '20.x'
+
+  # ✅ Install dependencies with fallback
+  - powershell: |
+      Write-Host "Installing npm dependencies..."
+      try {
+          npm install
+          npm ci --legacy-peer-deps
+      } catch {
+          Write-Warning "npm ci failed, falling back to npm install..."
+          npm install --legacy-peer-deps
+      }
+    displayName: 'Install npm dependencies'
+    
+  - powershell: |
+      Write-Host "Installing Playwright browsers (may take a moment)..."
+      npx playwright install --with-deps
+    displayName: 'Install Playwright browsers'
+    env:
+      NODE_OPTIONS: $(NODE_OPTIONS)  
+
+  - powershell: |
+      Write-Host "Generating BDD test files from feature files..."
+      npx bddgen
+    displayName: 'Generate BDD test files'
+    continueOnError: false
+
+  - powershell: |
+      $ErrorActionPreference = 'Stop'
+
+      $filePath = '${{ parameters.files_to_run }}'
+      $project = '${{ parameters.config_to_run }}'
+
+      Write-Host "Checking that the test file exists at: $filePath"
+      if (-not (Test-Path $filePath)) {
+        Write-Error "Test file not found: $filePath. Ensure the path is correct relative to the repository root."
+        exit 1
+      }
+
+      # Added maxDiffPixelRatio for visual regression tolerance
+      $cmdWithProject = "npx playwright test `"$filePath`" --project=`"$project`" --workers=1"
+      $cmdNoProject   = "npx playwright test `"$filePath`" --workers=1"
+
+      Write-Host "Trying Playwright with project: $project"
+      Write-Host $cmdWithProject
+
+      iex $cmdWithProject
+      $exitCode = $LASTEXITCODE
+
+      if ($exitCode -ne 0) {
+        # Retry if project not found
+        $log = Get-Content "$(Get-Location)\playwright-error.log" -ErrorAction SilentlyContinue
+        if ($log -match "Project\(s\).*not found" -or $log -match "Available projects") {
+          Write-Warning "Project '$project' not found. Retrying without --project..."
+          iex $cmdNoProject
+          $exitCode = $LASTEXITCODE
+        }
+      }
+
+      if ($exitCode -ne 0) {
+        Write-Warning "Playwright exited with code $exitCode. Check if test exists and has Playwright syntax (import { test } from '@playwright/test')."
+        exit $exitCode
+      } else {
+        Write-Host "Playwright test completed successfully."
+      }
+    displayName: 'Run the single Playwright spec file'
+    env:
+      CI: true
+      TEST_ENVIRONMENT: ${{ parameters.environment }}
+    continueOnError: true
+
+  # Debug / listings (always run)
+  - powershell: |
+      $ErrorActionPreference = 'Continue'
+      Write-Host "=== workspace listing (top few entries) ==="
+      Get-ChildItem -Path "$(Build.SourcesDirectory)" -Recurse -ErrorAction SilentlyContinue |
+        Select-Object FullName -First 200 | ForEach-Object { Write-Host $_.FullName }
+
+      Write-Host "=== Checking cucumber-report directory ==="
+      if (Test-Path "$(Build.SourcesDirectory)\cucumber-report") {
+        Write-Host "Cucumber report directory exists"
+        Get-ChildItem -Path "$(Build.SourcesDirectory)\cucumber-report" -Recurse | Select-Object FullName,Length | ForEach-Object { 
+          Write-Host "$($_.FullName) - Size: $($_.Length) bytes" 
+        }
+        
+        Write-Host "`n=== Checking cucumber-report.json content preview ==="
+        if (Test-Path "$(Build.SourcesDirectory)\cucumber-report\cucumber-report.json") {
+          $jsonContent = Get-Content "$(Build.SourcesDirectory)\cucumber-report\cucumber-report.json" -Raw
+          Write-Host "JSON file size: $($jsonContent.Length) characters"
+          Write-Host "First 500 characters:"
+          Write-Host $jsonContent.Substring(0, [Math]::Min(500, $jsonContent.Length))
+        }
+      } else {
+        Write-Host "No cucumber-report directory found."
+      }
+
+      Write-Host "`n=== Checking allure-results ==="
+      if (Test-Path "$(Build.SourcesDirectory)\allure-results") {
+        Get-ChildItem -Path "$(Build.SourcesDirectory)\allure-results" -Recurse | Select-Object FullName,Length | ForEach-Object { Write-Host $_.FullName }
+      } else {
+        Write-Host "No allure-results found."
+      }
+    displayName: 'Debug: list files & cucumber reports'
+    condition: always()
+
+  # Allure generation (same as Cypress pipeline)
+  - powershell: |
+      $ErrorActionPreference = 'Stop'
+      Write-Host "=== Allure: fetch latest release info from GitHub ==="
+      $repoApi = "https://api.github.com/repos/allure-framework/allure2/releases/latest"
+      $release = Invoke-RestMethod -Uri $repoApi -Headers @{ "User-Agent" = "AzurePipelines" }
+
+      $zipAsset = $release.assets | Where-Object { $_.name -match "allure-.*\.zip$" } | Select-Object -First 1
+      if (-not $zipAsset) {
+        Write-Warning "Couldn't find an allure zip in release; skipping generate."
+        exit 0
+      }
+
+      $tempZip = Join-Path $env:TEMP $zipAsset.name
+      Invoke-WebRequest -Uri $zipAsset.browser_download_url -OutFile $tempZip -UseBasicParsing
+
+      $extractDir = "$(Build.SourcesDirectory)\tools\allure-cli"
+      if (Test-Path $extractDir) { Remove-Item -Recurse -Force $extractDir }
+      New-Item -ItemType Directory -Path $extractDir | Out-Null
+
+      Expand-Archive -LiteralPath $tempZip -DestinationPath $extractDir
+
+      $extractedSubdir = Get-ChildItem -Directory $extractDir | Select-Object -First 1
+      if (-not $extractedSubdir) { Write-Warning "Allure archive layout unexpected; skipping." ; exit 0 }
+
+      $allureBin = Join-Path $extractedSubdir.FullName "bin"
+      $allureCmd = Join-Path $allureBin "allure.bat"
+      if (-not (Test-Path $allureCmd)) {
+        $allureCmd = Join-Path $allureBin "allure"
+        if (-not (Test-Path $allureCmd)) { Write-Warning "Allure binary missing; skipping generate." ; exit 0 }
+      }
+
+      if (!(Test-Path "$(Build.SourcesDirectory)\allure-results")) {
+        Write-Warning "No allure-results directory -> skipping generate."
+        exit 0
+      }
+
+      $outdir = "$(Build.SourcesDirectory)\Results\Generated_Output"
+      if (!(Test-Path $outdir)) { New-Item -ItemType Directory -Path $outdir | Out-Null }
+
+      Write-Host "Generating Allure report..."
+      & $allureCmd generate "$(Build.SourcesDirectory)\allure-results" --clean -o $outdir
+    displayName: 'Generate Allure Report (if allure-results present)'
+    condition: always()
+
+  - powershell: |
+      if (-not (Test-Path "$(Build.SourcesDirectory)\Results\Generated_Output")) {
+        New-Item -ItemType Directory -Path "$(Build.SourcesDirectory)\Results\Generated_Output" | Out-Null
+      }
+      Write-Host "Contents of Results/Generated_Output (if any):"
+      if (Test-Path "$(Build.SourcesDirectory)\Results\Generated_Output") {
+        Get-ChildItem -Path "$(Build.SourcesDirectory)\Results\Generated_Output" -Recurse | Select-Object FullName -First 200 | ForEach-Object { Write-Host $_.FullName }
+      } else {
+        Write-Host "No generated output found."
+      }
+      
+      # Check if allure-results exists and set variable
+      if (Test-Path "$(Build.SourcesDirectory)\allure-results") {
+        Write-Host "##vso[task.setvariable variable=AllureResultsExist]true"
+        Write-Host "allure-results directory found"
+      } else {
+        Write-Host "##vso[task.setvariable variable=AllureResultsExist]false"
+        Write-Host "allure-results directory not found - will skip publishing"
+      }
+    displayName: 'Ensure Results Directory Exists'
+    condition: always()
+
+  - task: PublishPipelineArtifact@1
+    displayName: 'Publish allure-results (if exists)'
+    inputs:
+      targetPath: '$(Build.SourcesDirectory)/allure-results'
+      artifact: 'allure-results'
+      publishLocation: 'pipeline'
+    condition: and(always(), eq(variables['AllureResultsExist'], 'true'))
+
+  - task: PublishPipelineArtifact@1
+    displayName: 'Publish playwright-report (if exists)'
+    inputs:
+      targetPath: '$(Build.SourcesDirectory)/playwright-report'
+      artifact: 'playwright-report'
+      publishLocation: 'pipeline'
+    condition: always()
+
+  - task: PublishPipelineArtifact@1
+    displayName: 'Publish test-results (screenshot diffs)'
+    inputs:
+      targetPath: '$(Build.SourcesDirectory)/test-results'
+      artifact: 'test-results'
+      publishLocation: 'pipeline'
+    condition: always()
+
+  - task: PublishPipelineArtifact@1
+    displayName: 'Publish cucumber-report (if exists)'
+    inputs:
+      targetPath: '$(Build.SourcesDirectory)/cucumber-report'
+      artifact: 'cucumber-report'
+      publishLocation: 'pipeline'
+    condition: always()
+
+  - powershell: |
+      Write-Host "##vso[task.addattachment type=Distributedtask.Core.Summary;name=Cucumber Report;]$(Build.SourcesDirectory)/cucumber-report/cucumber-html-report.html"
+    displayName: 'Attach Cucumber Report to Summary' 
+   

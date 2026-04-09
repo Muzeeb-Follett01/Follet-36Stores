@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "lib": ["ES2020", "DOM"],
+    "strict": false,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "outDir": "build",
+    "rootDir": ".",
+    "types": ["node"],
+    "skipLibCheck": true
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules", "build"]
+}

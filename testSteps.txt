@@ -1,0 +1,14 @@
+Navigate to  https://ntc.bkstr.com/
+Click on "Shop By"
+Click on "Clothing and Accessories"
+Select "Solo GLHF Tablet Sling"
+Add item to cart/bag
+Click on "checkout" button
+Fill email field as yeikuhozoiffa-1695@yopmail.com
+Select "Pickup" and choose the free option
+"Fill Credit Card details as
+Card number: 5555 5555 5555 4444
+Expiration Date: 03/31
+CVV: 999
+Name on card: John Doe"
+Click on "Complete Order"

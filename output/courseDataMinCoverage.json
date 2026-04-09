@@ -1,0 +1,68 @@
+[
+  {
+    "term": "SPRING 2026",
+    "department": "PRACTICAL NURSE DIPLOMA",
+    "course": "NURS1202",
+    "section": "26SP",
+    "textbooks": [
+      {
+        "name": "NURSING FOUNDATIONS 1 LAB KIT",
+        "format": "buy",
+        "condition": "Assorted"
+      },
+      {
+        "name": "Potter and Perry's Canadian Fundamentals of Nursing",
+        "format": "print",
+        "condition": "Buy New"
+      },
+      {
+        "name": "Potter and Perry's Canadian Fundamentals of Nursing",
+        "format": "print",
+        "condition": "Rent New"
+      },
+      {
+        "name": "Additional Precautions  tag-ap",
+        "format": "buy",
+        "condition": ""
+      },
+      {
+        "name": "Potter and Perry's Canadian Fundamentals of Nursing - E-Book : Potter and Perry's Canadian Fundamentals of Nursing - E-Book",
+        "format": "digital",
+        "condition": "Rent"
+      }
+    ]
+  },
+  {
+    "term": "SPRING 2026",
+    "department": "EARLY CHILDHOOD EDUCATION AND DEVELOPMENT",
+    "course": "ELCC1313",
+    "section": "26SP",
+    "textbooks": [
+      {
+        "name": "Guidance of Young Children",
+        "format": "digital",
+        "condition": "Buy"
+      },
+      {
+        "name": "Guidance of Young Children",
+        "format": "print",
+        "condition": "Buy New"
+      },
+      {
+        "name": "Guidance of Young Children",
+        "format": "print",
+        "condition": "Buy Used"
+      },
+      {
+        "name": "Guidance of Young Children",
+        "format": "print",
+        "condition": "Rent Used"
+      },
+      {
+        "name": "Guidance of Young Children",
+        "format": "digital",
+        "condition": "Rent"
+      }
+    ]
+  }
+]

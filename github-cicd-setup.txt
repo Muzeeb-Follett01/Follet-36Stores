@@ -1,0 +1,187 @@
+===============================================================================
+  GITHUB CI/CD SETUP — STEP BY STEP
+===============================================================================
+
+PREREQUISITE: Install Git and GitHub CLI
+===============================================================================
+
+  1. Download and install Git:
+     https://git-scm.com/download/win
+
+  2. Download and install GitHub CLI:
+     https://cli.github.com/
+
+  3. Restart VS Code / terminal after installation.
+
+===============================================================================
+  STEP 1: Configure Git
+===============================================================================
+
+  git config --global user.name "smuzeeb"
+  git config --global user.email "smuzeeb@follett.com"
+
+===============================================================================
+  STEP 2: Create a GitHub Repository
+===============================================================================
+
+  Option A — Create via GitHub website:
+    1. Go to https://github.com/new
+    2. Repository name: follet-playwright-tests (or your preferred name)
+    3. Set to Private
+    4. Do NOT initialize with README (we already have code)
+    5. Click "Create repository"
+
+  Option B — Create via GitHub CLI:
+    gh auth login
+    gh repo create follet-playwright-tests --private --source=. --push
+
+===============================================================================
+  STEP 3: Initialize and Push Code
+===============================================================================
+
+  cd C:\follet-rdc\testdata\Follett\37_Stores\Follet-36Stores
+
+  git init
+  git add .
+  git commit -m "Add Playwright store tests with CI/CD pipeline"
+  git remote add origin https://github.com/YOUR_USERNAME/follet-playwright-tests.git
+  git push -u origin main
+
+  NOTE: Replace YOUR_USERNAME with your actual GitHub username.
+
+  IMPORTANT: Make sure these files are committed:
+    - .github/workflows/playwright-store-tests.yml  (CI/CD pipeline)
+    - scripts/jiraAttach.ts                          (Jira integration)
+    - scripts/generateTestDataExcel.ts               (Excel generation)
+    - testdata/Follett/bkstr-0026.xlsx               (test data)
+    - jira.env should be in .gitignore (contains credentials)
+
+===============================================================================
+  STEP 4: Add GitHub Secrets (for Jira integration)
+===============================================================================
+
+  Option A — Via GitHub CLI:
+
+    gh secret set JIRA_BASE_URL --body "https://jira.follett.com"
+    gh secret set JIRA_USERNAME --body "smuzeeb"
+    gh secret set JIRA_API_TOKEN --body "YOUR_JIRA_PAT_TOKEN"
+
+  Option B — Via GitHub website:
+
+    1. Go to your repo on GitHub
+    2. Click Settings (top tab)
+    3. Left sidebar: Secrets and variables → Actions
+    4. Click "New repository secret"
+    5. Add these three secrets:
+
+       Name: JIRA_BASE_URL
+       Value: https://jira.follett.com
+
+       Name: JIRA_USERNAME
+       Value: smuzeeb
+
+       Name: JIRA_API_TOKEN
+       Value: (paste your Jira Personal Access Token here)
+
+===============================================================================
+  STEP 5: Add jira.env to .gitignore (security)
+===============================================================================
+
+  Make sure jira.env is NOT pushed to GitHub:
+
+  echo "jira.env" >> .gitignore
+  git add .gitignore
+  git commit -m "Add jira.env to gitignore"
+  git push
+
+===============================================================================
+  STEP 6: Run the Pipeline
+===============================================================================
+
+  Option A — Via GitHub CLI:
+
+    gh workflow run "Playwright Store Tests" \
+      -f store_id=0026 \
+      -f excel_file=bkstr-0026.xlsx \
+      -f browser="Google Chrome" \
+      -f upload_to_jira=true
+
+  Option B — Via GitHub website:
+
+    1. Go to your repo on GitHub
+    2. Click "Actions" tab
+    3. In the left sidebar, click "Playwright Store Tests"
+    4. Click "Run workflow" button (top right)
+    5. Fill in:
+       - Store ID: 0026
+       - Excel file: bkstr-0026.xlsx
+       - Browser: Google Chrome
+       - Upload to Jira: true
+    6. Click "Run workflow"
+
+===============================================================================
+  STEP 7: View Results
+===============================================================================
+
+  After the pipeline completes:
+
+  1. Go to Actions tab → click the completed run
+  2. You'll see:
+     - Test summary with pass/fail counts
+     - Downloadable artifacts:
+       • test-results-0026 (screenshots + videos)
+       • screenshots-videos-0026 (raw files)
+     - Playwright HTML report
+  3. If Jira upload was enabled, check:
+     Jira → TMSHOP → Test Cycles → Unscheduled → Test01
+
+===============================================================================
+  QUICK REFERENCE — ALL COMMANDS IN ORDER
+===============================================================================
+
+  # One-time setup:
+  git config --global user.name "smuzeeb"
+  git config --global user.email "smuzeeb@follett.com"
+  cd C:\follet-rdc\testdata\Follett\37_Stores\Follet-36Stores
+  echo "jira.env" >> .gitignore
+  git init
+  git add .
+  git commit -m "Add Playwright store tests with CI/CD pipeline"
+  git remote add origin https://github.com/YOUR_USERNAME/follet-playwright-tests.git
+  git push -u origin main
+
+  # Add secrets (via CLI):
+  gh auth login
+  gh secret set JIRA_BASE_URL --body "https://jira.follett.com"
+  gh secret set JIRA_USERNAME --body "smuzeeb"
+  gh secret set JIRA_API_TOKEN --body "YOUR_JIRA_PAT_TOKEN"
+
+  # Run pipeline:
+  gh workflow run "Playwright Store Tests" -f store_id=0026 -f excel_file=bkstr-0026.xlsx -f browser="Google Chrome" -f upload_to_jira=true
+
+  # Check status:
+  gh run list --workflow="Playwright Store Tests"
+  gh run view --log
+
+===============================================================================
+  PIPELINE OVERVIEW
+===============================================================================
+
+  Workflow file: .github/workflows/playwright-store-tests.yml
+
+  What it does:
+    1. Checks out code on Windows runner
+    2. Installs Node 18 + npm dependencies
+    3. Installs Playwright browsers
+    4. Runs all 12 specs (TMSHOP-450 to TMSHOP-463) with store Excel
+    5. Uploads screenshots/videos as GitHub artifacts
+    6. Attaches results to Jira Zephyr Squad (optional)
+    7. Publishes JUnit test summary in Actions UI
+
+  Trigger: Manual (workflow_dispatch) with inputs:
+    - store_id (e.g. 0026)
+    - excel_file (e.g. bkstr-0026.xlsx)
+    - browser (Google Chrome / chromium / firefox / webkit)
+    - upload_to_jira (true / false)
+
+===============================================================================

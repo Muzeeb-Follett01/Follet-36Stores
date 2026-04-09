@@ -1,0 +1,387 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - banner [ref=e3]:
+    - generic [ref=e6]:
+      - link "University of Wisconsin - River Falls Bookstore/Falcon Shop" [ref=e8] [cursor=pointer]:
+        - /url: /
+        - img "University of Wisconsin - River Falls Bookstore/Falcon Shop" [ref=e10]
+      - list
+      - search "Search" [ref=e12]:
+        - search [ref=e13]:
+          - generic [ref=e14]:
+            - generic [ref=e15]:
+              - generic:
+                - img
+              - generic [ref=e16]: Search
+              - combobox "Search" [active] [ref=e17]
+            - button "Close dialog" [ref=e18] [cursor=pointer]: Cancel
+          - listbox [expanded] [ref=e21]:
+            - generic [ref=e22]:
+              - generic [ref=e23]:
+                - heading "Popular Searches" [level=4] [ref=e24]:
+                  - generic [ref=e25]: Popular Searches
+                - listbox "Popular searches" [ref=e26]:
+                  - listitem [ref=e27]:
+                    - link "sale" [ref=e28] [cursor=pointer]:
+                      - /url: /search?q=sale
+                      - generic:
+                        - img
+                      - generic [ref=e29]: sale
+                  - listitem [ref=e30]:
+                    - link "Men" [ref=e31] [cursor=pointer]:
+                      - /url: /search?q=Men
+                      - generic:
+                        - img
+                      - generic [ref=e32]: Men
+                  - listitem [ref=e33]:
+                    - link "youth" [ref=e34] [cursor=pointer]:
+                      - /url: /search?q=youth
+                      - generic:
+                        - img
+                      - generic [ref=e35]: youth
+                  - listitem [ref=e36]:
+                    - link "sports" [ref=e37] [cursor=pointer]:
+                      - /url: /search?q=sports
+                      - generic:
+                        - img
+                      - generic [ref=e38]: sports
+                  - listitem [ref=e39]:
+                    - link "women" [ref=e40] [cursor=pointer]:
+                      - /url: /search?q=women
+                      - generic:
+                        - img
+                      - generic [ref=e41]: women
+                  - listitem [ref=e42]:
+                    - link "bottoms" [ref=e43] [cursor=pointer]:
+                      - /url: /search?q=bottoms
+                      - generic:
+                        - img
+                      - generic [ref=e44]: bottoms
+                  - listitem [ref=e45]:
+                    - link "top" [ref=e46] [cursor=pointer]:
+                      - /url: /search?q=top
+                      - generic:
+                        - img
+                      - generic [ref=e47]: top
+                  - listitem [ref=e48]:
+                    - link "pants" [ref=e49] [cursor=pointer]:
+                      - /url: /search?q=pants
+                      - generic:
+                        - img
+                      - generic [ref=e50]: pants
+              - generic [ref=e51]:
+                - heading "Featured Products" [level=4] [ref=e52]:
+                  - generic [ref=e53]: Featured Products
+                - listbox "Featured Products" [ref=e54]:
+                  - listitem [ref=e55]:
+                    - generic [ref=e56]:
+                      - link "University of Wisconsin - River Falls Falcons 1/4 Zip Top" [ref=e57] [cursor=pointer]:
+                        - /url: /products/1-4-zip-sullivan-m-black-sm-595175-1
+                        - generic [ref=e58]: University of Wisconsin - River Falls Falcons 1/4 Zip Top
+                      - img "University of Wisconsin - River Falls Falcons 1/4 Zip Top" [ref=e60]
+                      - generic [ref=e61]:
+                        - paragraph [ref=e62]: Boxercraft
+                        - paragraph [ref=e63]: University of Wisconsin - River Falls Falcons 1/4 Zip Top
+                  - listitem [ref=e64]:
+                    - generic [ref=e65]:
+                      - link "University of Wisconsin - River Falls Beanie" [ref=e66] [cursor=pointer]:
+                        - /url: /products/beanie-cascade-pom-red-1size-84942-1
+                        - generic [ref=e67]: University of Wisconsin - River Falls Beanie
+                      - img "University of Wisconsin - River Falls Beanie" [ref=e69]
+                      - generic [ref=e70]:
+                        - paragraph [ref=e71]: 47 Brand
+                        - paragraph [ref=e72]: University of Wisconsin - River Falls Beanie
+                  - listitem [ref=e73]:
+                    - generic [ref=e74]:
+                      - link "University of Wisconsin - River Falls 1/4 Zip Top" [ref=e75] [cursor=pointer]:
+                        - /url: /products/1-4z-pwrbl-1-2c-fs-othtr-sm-916244-1
+                        - generic [ref=e76]: University of Wisconsin - River Falls 1/4 Zip Top
+                      - img "University of Wisconsin - River Falls 1/4 Zip Top" [ref=e78]
+                      - generic [ref=e79]:
+                        - paragraph [ref=e80]: Champion
+                        - paragraph [ref=e81]: University of Wisconsin - River Falls 1/4 Zip Top
+                  - listitem [ref=e82]:
+                    - generic [ref=e83]:
+                      - link "University of Wisconsin - River Falls Falcons Women's Knit Hat" [ref=e84] [cursor=pointer]:
+                        - /url: /products/wm-knit-hat-jamie-black-1size-85495-1
+                        - generic [ref=e85]: University of Wisconsin - River Falls Falcons Women's Knit Hat
+                      - img "University of Wisconsin - River Falls Falcons Women's Knit Hat" [ref=e87]
+                      - generic [ref=e88]:
+                        - paragraph [ref=e89]: Logo Fit
+                        - paragraph [ref=e90]: University of Wisconsin - River Falls Falcons Women's Knit Hat
+                - link "View All" [ref=e91] [cursor=pointer]:
+                  - /url: /search?q=&filter.v.availability=1
+  - main [ref=e92]:
+    - generic [ref=e95]:
+      - generic [ref=e96]:
+        - generic:
+          - button "Previous slide" [ref=e97] [cursor=pointer]:
+            - generic:
+              - img
+          - button "Next slide" [ref=e98] [cursor=pointer]:
+            - generic:
+              - img
+        - generic [ref=e99]:
+          - link [ref=e104] [cursor=pointer]:
+            - /url: /collections/t-shirts-and-tanks?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+          - link [ref=e109] [cursor=pointer]:
+            - /url: /collections/apple?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+      - list [ref=e111]:
+        - listitem [ref=e112]:
+          - button "Slide 1 of 2" [ref=e113] [cursor=pointer]: "1"
+        - listitem [ref=e114]:
+          - button "Slide 2 of 2" [ref=e115] [cursor=pointer]: "2"
+    - iframe [ref=e121]:
+      - generic [active] [ref=f38e1]:
+        - link "Modera Woodbridge Modera Woodbridge Apartments CONTACT US" [ref=f38e4] [cursor=pointer]:
+          - /url: https://googleads.g.doubleclick.net/aclk?sa=l&ai=Cx57kRb7LafWROO3j48APoNiBEJqL55mGAbuV167GELqy0_uODhABINrXxTlgyQagAZGd_ekoyAEG4AIAqAMByAMKqgSAAk_QuwRCTaxe8PkZ4bvOBvYgMOHUfuO4shKHmk4niKvsQl3-Rz1EmR1sOPoPLLap7FPyIJz6STYtTTBHS6_acan48f8LP_WrltEGw6kEQShV-RU55QBStbDVgeCuxI9leOoHfN3EzRTluFxrrbpKNvWibhGjfeRSPN9d0qW_ujDDpUPuo6NDZc-dgO5i7jXdjYlD9toVLce079fK8TGrjp5WhZuyG5wHixSb1rjOOXM6C-vlJQhp_vnEbG8SplqwR21EvOBnPOefzkOzspdFq-OllkOeL6YyVQJcRyY5N1GvdFx-3ZyRzPizcbfPiovakSWJt59ouL_D7NoSg-yUbmfABPTk3NybBOAEAYgFibv65EKAB5HVzckDqAenzLECqAemvhuoB8zOsQKoB_PRG6gHltgbqAeqm7ECqAeOzhuoB5PYG6gH8OAbqAfulrECqAf-nrECqAevvrECqAfVyRuoB9m2sQKoB5oGqAf_nrECqAffn7ECqAf4wrECqAf7wrEC2AcB0ggwCIBhEAEYnQEyCIqCgICAgIAIOg6AQIDAgICAgKiAAqiDEEi9_cE6WPXJ0oCSypMD8ggbYWR4LXN1YnN5bi01NDU3OTMxOTc4MzU4MTY2sQnvg5ROs94eoYAKA5gLAcgLAaoNAlVTyA0B4g0TCLj-0oCSypMDFe3xGAIdIGwAAuoNEwiTntWAksqTAxXt8RgCHSBsAALwDQKIDv___________wHYEw2IFAbQFQHKFgIKAPgWAYAXAbIXEBgBKgo4NDY2MTU2MzU0UAa6FwI4AaoYFwkAAAAAYPsSQRIKODQ2NjE1NjM1NBgBshgJEgKTThgBIgEA0BgBwhkCCAE&ae=1&gclid=EAIaIQobChMItcjZgJLKkwMV7fEYAh0gbAACEAEYASAAEgJRAvD_BwE&num=1&cid=CAQS4wEABaugfUnbj28xHIqvX_AXKMr1sPfE5_wy-KsRPvUO_r0SPpb2HWvLqed_oYns9C2ZPfYPIgr6stvrpxPpyyAgSp6QljcGc1BiTQe0VguCPf3UtqCgozLr7e9h-V2qcNuuZtj4fljWXPjuxEZtHX-a7r8N7npmddKEBcZop80OP07zluBgWSNfjdbPdF64AHbxVE0S4JjqX-O6hDqNr6C1XkWSy5XDYHQNYyX83w83P_98yl6YM14hC-Hsv5y6vXeFV2CUgVZrCpguZ-Cet6i4I7XTscRhh1FjY5FMWrbdDwtJdxgB&sig=AOD64_12UPxQhnyUQUoUNi4nIT2QStV_5Q&client=ca-pub-3605257360853185&rf=4&nb=2&adurl=https://www.moderawoodbridge.com/%3Fswitch_cls%5Bid%5D%3D94595%26gad_source%3D5%26gad_campaignid%3D17928461705%26gclid%3DEAIaIQobChMItcjZgJLKkwMV7fEYAh0gbAACEAEYASAAEgJRAvD_BwE
+          - generic [ref=f38e5]:
+            - generic [ref=f38e8]:
+              - generic "Modera Woodbridge" [ref=f38e9]:
+                - link "Modera Woodbridge" [ref=f38e10]
+              - generic "Modera Woodbridge" [ref=f38e11]:
+                - link "Modera Woodbridge Apartments" [ref=f38e12]
+            - link "CONTACT US" [ref=f38e14]:
+              - generic [ref=f38e15]:
+                - generic:
+                  - generic: CONTACT US
+        - generic [ref=f38e17]:
+          - link [ref=f38e19] [cursor=pointer]:
+            - /url: https://adssettings.google.com/whythisad?source=display&reasons=AcrBLeXq1dn8y_zVuQ96PfB8KPXL5YB6lXzTh8IsPMv0qfiVUwoxfSBauJbq_l71IXT7SGVVcZQPrBL6-EJWc5wqpqX0gbHPtbkxQ6VbofbIZXz2GqgRWnkT_TfSM9VIyxWZ9Ktcg9qceYjsBGtB9inF1tnws3T9Ff_oxdSD4p4ap3qpNySTZusb8TtNPrvdAlB59r3G2kY7_5mev6_iam8z3okMDnkxCLufgcuUjSqGvxdYFawUbNEDP07AJGVQyDWHOQNwUZLlbaak0nWurlqvlXeLSVf89pzN-h6gvJkUztaBfwXS0oTyxm2TIhZKtH3DPqzlOCTvbsMdm6jt3a6BgLUVrkbaTU4R6UnoRnbjFfQEKPgzK127PRbeZ_HzxGzJgfFusdo-jAFCHW_NqY1oaK7sovVdoLTprXuNOgR2pVQfz5sB-1gE6AmiM_sionU9u0BZnuaT1G13DL7gPpsKHZnZ5vAUdFxPSVLOlaKQGmwitIcU0ymDGm62hdTDalBnpUzR8tD8b2KrL_fjWVpO6LHSXhB0g2VACtiJlSjQXfmrRdI-0R8wVNGoL9aO9mqdYtUOecjR7R7DypwZkAU9jXuFB8uWkAnHlD_mglvFVu_OrrlSgBVLKanf-IhlbJJx9in8hKUtKw8yyDjCfn9ycz46ewqAy_COd6glbaR-Mjj8kyhhucGVrJ0hw6LUpFu8OrOmOUsJ0Aqe4T6Pb-PEbxToGxUvQti-P-oz05Z1Qboj-I3TcA-tGeRmjQ14CNSfIur_s2Z89KHqhLMsLkTVz0JnbwRm3PJ_vVglcDi7CXPRUjRXKwv5jd3P5U7OIH9v_zYkT1rW9JtPoqpI7eUHrDrumwFHfifpdjcde2RF3fkdxhwrQviMPvWcreoAjdWhjAvolsEBN8b-RrWrSVg0QojxVERHX7as0N5NyU7yQjKB8g-WWAZAUO9oePSVCaXIOJYPU9ywP0acUmnzBo2MbJpgTxf8hUG12pL3v931P-9LzgTkNuAO-qPCXtaM0fzG36EjO1BNueStjElRjlbsqltQSv4mkfgbFcstxiS0C8yNOEVKMGr3EjC_PwL_VrJdjiDysMIkYmqo00jxVMJgdXB-hAJju3-G3eqvTY2byvuj6nlFAcs6jTYmuQ7I4JiSeLz7njeWK8Tr2zrAf-RswWO9XpY5IjvJWezyL5UJpHSdfkqoXy99zje8VrjwO8KmV82-rmNpm_KK-3dxxGhcdNgedvjsg7S2mDfOg0MZCUr_B0CM3C58TRA6h5nuI6WfDbqKbXwGSrfQWFaH7Nitol4LgC3SyiiFJTnv3Pz7p3ymK1yiFYfGj2ccc-uJv7MX7dzE9ifIAHZ0aMIR60FTw6V7odIgxroAmtmTB7NyXqeWboNMqJ_6e5Q-eRD8WK0HVU96CbD8y1H4hYyV6zT4uNQlE_K5ojZEuAiTsryYPE214hEvMvAENOC76cC5wgLejiuTjmprWexmPF0chuVi-jZK-0q4eJpTdjqbvfYAygaKtyfkl-KhwFA52P6CHqlr6Zg2ke9A_DbJ7bZSwvIQ9AS3yuOsqeX1Mv9RCVZNpwHowTUvngS-LJu1n1Z6oHx0NUQ_IRvjKi73QNVHTc2a9uc2kUb9G0Cv7V2fa7EkVO8EYoR7QmXB1l8CKdIWoFAX3HtCkFYhvgI6fV9pRE3lOcIpse3GZ78P_YtkSEJ6Ej6l9an_Ws-zgQyKcCgVZOdz19ROdg7gC5zaNkLxbkzu3GjITe5VLgBiBsq932bYgdXVzK_1WERJWDedTnV7Ea2SXPpSB5-jb5a0fDLq6xB7-2UbYPiKU2Y4HLXl67--bImkdk9ngQ50oG9BJMHQSgeLDK7ZW2e-Ys0EgQ1CmR07LYmnIkywDm3cXgtEjls3SlP1b2uGVWKYYgeFfiJXEN6eowfDyYv5WDK7JtqTN2jftsi1cdEH-F61Njat_hPUkEmM-poLjcGyBs1d_9g5cm5sD-a_4NSXp1ZkXhp5yPouQ1ePjZLxrIc9xilLkpAcusTZNiAoOeA1E0XXC_32YyjwiEOiW9ilj6B5xvADR8CeMEH98qyaLh7qEbnmg8Vvaxjoabv7R9Rr_6MWq6oSOtNP10SdqofECF7XVU3K43pCQDHrUCtjxjsk3Gf8srQu06I-N7FTKcr5N-3XsGgpqGscJ4nooQpbn4cuKVq_gj9UgSa7kYvhhvOo1ww35KbTQTw7tgsK8NgGLcRlU1TNFCPIdKcHY71VlTgew1fhvZH0a5Y-uQIrDScJZLU1xsSR8K8dN77kJZbZk35YPVuLZ7CxGOrMyhxQxrMvJ6VfGw3yzvULUpqq4CIxXDcyqOWhDQKLWFEGNqneIlTrpdxTmvBgZABklTxiZmCsJ1m7B_L76yw7aI_nNOOMs_Tp0R10F9AK7PpZLJ9wiaR6UPkUEMDL7Q36MguZGcBf2kNiOGNWyxeMV87Q3BnKWAxhWhNsOjuDBrGpU9E1fG9zb6Ev0SVl7klOr5x7V_b2xXl3yiupX1Jsl8MfZ2GilqAzeYNX3UFC65y4669-SgJwcrbCiwYwS4o5ti20II_vnfL_B_EJHvdWmw&opi=122715837
+            - img [ref=f38e21]
+          - link [ref=f38e23] [cursor=pointer]:
+            - /url: https://adssettings.google.com/whythisad?source=display&reasons=AcrBLeXq1dn8y_zVuQ96PfB8KPXL5YB6lXzTh8IsPMv0qfiVUwoxfSBauJbq_l71IXT7SGVVcZQPrBL6-EJWc5wqpqX0gbHPtbkxQ6VbofbIZXz2GqgRWnkT_TfSM9VIyxWZ9Ktcg9qceYjsBGtB9inF1tnws3T9Ff_oxdSD4p4ap3qpNySTZusb8TtNPrvdAlB59r3G2kY7_5mev6_iam8z3okMDnkxCLufgcuUjSqGvxdYFawUbNEDP07AJGVQyDWHOQNwUZLlbaak0nWurlqvlXeLSVf89pzN-h6gvJkUztaBfwXS0oTyxm2TIhZKtH3DPqzlOCTvbsMdm6jt3a6BgLUVrkbaTU4R6UnoRnbjFfQEKPgzK127PRbeZ_HzxGzJgfFusdo-jAFCHW_NqY1oaK7sovVdoLTprXuNOgR2pVQfz5sB-1gE6AmiM_sionU9u0BZnuaT1G13DL7gPpsKHZnZ5vAUdFxPSVLOlaKQGmwitIcU0ymDGm62hdTDalBnpUzR8tD8b2KrL_fjWVpO6LHSXhB0g2VACtiJlSjQXfmrRdI-0R8wVNGoL9aO9mqdYtUOecjR7R7DypwZkAU9jXuFB8uWkAnHlD_mglvFVu_OrrlSgBVLKanf-IhlbJJx9in8hKUtKw8yyDjCfn9ycz46ewqAy_COd6glbaR-Mjj8kyhhucGVrJ0hw6LUpFu8OrOmOUsJ0Aqe4T6Pb-PEbxToGxUvQti-P-oz05Z1Qboj-I3TcA-tGeRmjQ14CNSfIur_s2Z89KHqhLMsLkTVz0JnbwRm3PJ_vVglcDi7CXPRUjRXKwv5jd3P5U7OIH9v_zYkT1rW9JtPoqpI7eUHrDrumwFHfifpdjcde2RF3fkdxhwrQviMPvWcreoAjdWhjAvolsEBN8b-RrWrSVg0QojxVERHX7as0N5NyU7yQjKB8g-WWAZAUO9oePSVCaXIOJYPU9ywP0acUmnzBo2MbJpgTxf8hUG12pL3v931P-9LzgTkNuAO-qPCXtaM0fzG36EjO1BNueStjElRjlbsqltQSv4mkfgbFcstxiS0C8yNOEVKMGr3EjC_PwL_VrJdjiDysMIkYmqo00jxVMJgdXB-hAJju3-G3eqvTY2byvuj6nlFAcs6jTYmuQ7I4JiSeLz7njeWK8Tr2zrAf-RswWO9XpY5IjvJWezyL5UJpHSdfkqoXy99zje8VrjwO8KmV82-rmNpm_KK-3dxxGhcdNgedvjsg7S2mDfOg0MZCUr_B0CM3C58TRA6h5nuI6WfDbqKbXwGSrfQWFaH7Nitol4LgC3SyiiFJTnv3Pz7p3ymK1yiFYfGj2ccc-uJv7MX7dzE9ifIAHZ0aMIR60FTw6V7odIgxroAmtmTB7NyXqeWboNMqJ_6e5Q-eRD8WK0HVU96CbD8y1H4hYyV6zT4uNQlE_K5ojZEuAiTsryYPE214hEvMvAENOC76cC5wgLejiuTjmprWexmPF0chuVi-jZK-0q4eJpTdjqbvfYAygaKtyfkl-KhwFA52P6CHqlr6Zg2ke9A_DbJ7bZSwvIQ9AS3yuOsqeX1Mv9RCVZNpwHowTUvngS-LJu1n1Z6oHx0NUQ_IRvjKi73QNVHTc2a9uc2kUb9G0Cv7V2fa7EkVO8EYoR7QmXB1l8CKdIWoFAX3HtCkFYhvgI6fV9pRE3lOcIpse3GZ78P_YtkSEJ6Ej6l9an_Ws-zgQyKcCgVZOdz19ROdg7gC5zaNkLxbkzu3GjITe5VLgBiBsq932bYgdXVzK_1WERJWDedTnV7Ea2SXPpSB5-jb5a0fDLq6xB7-2UbYPiKU2Y4HLXl67--bImkdk9ngQ50oG9BJMHQSgeLDK7ZW2e-Ys0EgQ1CmR07LYmnIkywDm3cXgtEjls3SlP1b2uGVWKYYgeFfiJXEN6eowfDyYv5WDK7JtqTN2jftsi1cdEH-F61Njat_hPUkEmM-poLjcGyBs1d_9g5cm5sD-a_4NSXp1ZkXhp5yPouQ1ePjZLxrIc9xilLkpAcusTZNiAoOeA1E0XXC_32YyjwiEOiW9ilj6B5xvADR8CeMEH98qyaLh7qEbnmg8Vvaxjoabv7R9Rr_6MWq6oSOtNP10SdqofECF7XVU3K43pCQDHrUCtjxjsk3Gf8srQu06I-N7FTKcr5N-3XsGgpqGscJ4nooQpbn4cuKVq_gj9UgSa7kYvhhvOo1ww35KbTQTw7tgsK8NgGLcRlU1TNFCPIdKcHY71VlTgew1fhvZH0a5Y-uQIrDScJZLU1xsSR8K8dN77kJZbZk35YPVuLZ7CxGOrMyhxQxrMvJ6VfGw3yzvULUpqq4CIxXDcyqOWhDQKLWFEGNqneIlTrpdxTmvBgZABklTxiZmCsJ1m7B_L76yw7aI_nNOOMs_Tp0R10F9AK7PpZLJ9wiaR6UPkUEMDL7Q36MguZGcBf2kNiOGNWyxeMV87Q3BnKWAxhWhNsOjuDBrGpU9E1fG9zb6Ev0SVl7klOr5x7V_b2xXl3yiupX1Jsl8MfZ2GilqAzeYNX3UFC65y4669-SgJwcrbCiwYwS4o5ti20II_vnfL_B_EJHvdWmw&opi=122715837
+            - img [ref=f38e25]
+        - img [ref=f38e28] [cursor=pointer]
+        - generic [ref=f38e39]:
+          - img [ref=f38e42]
+          - generic [ref=f38e45]:
+            - text: Ads by
+            - img [ref=f38e46]
+          - generic [ref=f38e49]:
+            - generic [ref=f38e52] [cursor=pointer]: Send feedback
+            - link [ref=f38e54] [cursor=pointer]:
+              - /url: https://adssettings.google.com/whythisad?source=display&reasons=AcrBLeXq1dn8y_zVuQ96PfB8KPXL5YB6lXzTh8IsPMv0qfiVUwoxfSBauJbq_l71IXT7SGVVcZQPrBL6-EJWc5wqpqX0gbHPtbkxQ6VbofbIZXz2GqgRWnkT_TfSM9VIyxWZ9Ktcg9qceYjsBGtB9inF1tnws3T9Ff_oxdSD4p4ap3qpNySTZusb8TtNPrvdAlB59r3G2kY7_5mev6_iam8z3okMDnkxCLufgcuUjSqGvxdYFawUbNEDP07AJGVQyDWHOQNwUZLlbaak0nWurlqvlXeLSVf89pzN-h6gvJkUztaBfwXS0oTyxm2TIhZKtH3DPqzlOCTvbsMdm6jt3a6BgLUVrkbaTU4R6UnoRnbjFfQEKPgzK127PRbeZ_HzxGzJgfFusdo-jAFCHW_NqY1oaK7sovVdoLTprXuNOgR2pVQfz5sB-1gE6AmiM_sionU9u0BZnuaT1G13DL7gPpsKHZnZ5vAUdFxPSVLOlaKQGmwitIcU0ymDGm62hdTDalBnpUzR8tD8b2KrL_fjWVpO6LHSXhB0g2VACtiJlSjQXfmrRdI-0R8wVNGoL9aO9mqdYtUOecjR7R7DypwZkAU9jXuFB8uWkAnHlD_mglvFVu_OrrlSgBVLKanf-IhlbJJx9in8hKUtKw8yyDjCfn9ycz46ewqAy_COd6glbaR-Mjj8kyhhucGVrJ0hw6LUpFu8OrOmOUsJ0Aqe4T6Pb-PEbxToGxUvQti-P-oz05Z1Qboj-I3TcA-tGeRmjQ14CNSfIur_s2Z89KHqhLMsLkTVz0JnbwRm3PJ_vVglcDi7CXPRUjRXKwv5jd3P5U7OIH9v_zYkT1rW9JtPoqpI7eUHrDrumwFHfifpdjcde2RF3fkdxhwrQviMPvWcreoAjdWhjAvolsEBN8b-RrWrSVg0QojxVERHX7as0N5NyU7yQjKB8g-WWAZAUO9oePSVCaXIOJYPU9ywP0acUmnzBo2MbJpgTxf8hUG12pL3v931P-9LzgTkNuAO-qPCXtaM0fzG36EjO1BNueStjElRjlbsqltQSv4mkfgbFcstxiS0C8yNOEVKMGr3EjC_PwL_VrJdjiDysMIkYmqo00jxVMJgdXB-hAJju3-G3eqvTY2byvuj6nlFAcs6jTYmuQ7I4JiSeLz7njeWK8Tr2zrAf-RswWO9XpY5IjvJWezyL5UJpHSdfkqoXy99zje8VrjwO8KmV82-rmNpm_KK-3dxxGhcdNgedvjsg7S2mDfOg0MZCUr_B0CM3C58TRA6h5nuI6WfDbqKbXwGSrfQWFaH7Nitol4LgC3SyiiFJTnv3Pz7p3ymK1yiFYfGj2ccc-uJv7MX7dzE9ifIAHZ0aMIR60FTw6V7odIgxroAmtmTB7NyXqeWboNMqJ_6e5Q-eRD8WK0HVU96CbD8y1H4hYyV6zT4uNQlE_K5ojZEuAiTsryYPE214hEvMvAENOC76cC5wgLejiuTjmprWexmPF0chuVi-jZK-0q4eJpTdjqbvfYAygaKtyfkl-KhwFA52P6CHqlr6Zg2ke9A_DbJ7bZSwvIQ9AS3yuOsqeX1Mv9RCVZNpwHowTUvngS-LJu1n1Z6oHx0NUQ_IRvjKi73QNVHTc2a9uc2kUb9G0Cv7V2fa7EkVO8EYoR7QmXB1l8CKdIWoFAX3HtCkFYhvgI6fV9pRE3lOcIpse3GZ78P_YtkSEJ6Ej6l9an_Ws-zgQyKcCgVZOdz19ROdg7gC5zaNkLxbkzu3GjITe5VLgBiBsq932bYgdXVzK_1WERJWDedTnV7Ea2SXPpSB5-jb5a0fDLq6xB7-2UbYPiKU2Y4HLXl67--bImkdk9ngQ50oG9BJMHQSgeLDK7ZW2e-Ys0EgQ1CmR07LYmnIkywDm3cXgtEjls3SlP1b2uGVWKYYgeFfiJXEN6eowfDyYv5WDK7JtqTN2jftsi1cdEH-F61Njat_hPUkEmM-poLjcGyBs1d_9g5cm5sD-a_4NSXp1ZkXhp5yPouQ1ePjZLxrIc9xilLkpAcusTZNiAoOeA1E0XXC_32YyjwiEOiW9ilj6B5xvADR8CeMEH98qyaLh7qEbnmg8Vvaxjoabv7R9Rr_6MWq6oSOtNP10SdqofECF7XVU3K43pCQDHrUCtjxjsk3Gf8srQu06I-N7FTKcr5N-3XsGgpqGscJ4nooQpbn4cuKVq_gj9UgSa7kYvhhvOo1ww35KbTQTw7tgsK8NgGLcRlU1TNFCPIdKcHY71VlTgew1fhvZH0a5Y-uQIrDScJZLU1xsSR8K8dN77kJZbZk35YPVuLZ7CxGOrMyhxQxrMvJ6VfGw3yzvULUpqq4CIxXDcyqOWhDQKLWFEGNqneIlTrpdxTmvBgZABklTxiZmCsJ1m7B_L76yw7aI_nNOOMs_Tp0R10F9AK7PpZLJ9wiaR6UPkUEMDL7Q36MguZGcBf2kNiOGNWyxeMV87Q3BnKWAxhWhNsOjuDBrGpU9E1fG9zb6Ev0SVl7klOr5x7V_b2xXl3yiupX1Jsl8MfZ2GilqAzeYNX3UFC65y4669-SgJwcrbCiwYwS4o5ti20II_vnfL_B_EJHvdWmw&opi=122715837
+              - generic [ref=f38e55]:
+                - text: Why this ad?
+                - img [ref=f38e56]
+        - generic [ref=f38e59]:
+          - generic [ref=f38e62] [cursor=pointer]: Ad covered content
+          - generic [ref=f38e65] [cursor=pointer]: Ad was inappropriate
+          - generic [ref=f38e68] [cursor=pointer]: Not interested in this ad
+          - generic [ref=f38e71] [cursor=pointer]: Seen this ad multiple times
+        - generic [ref=f38e77]: Thanks. Feedback improves Google ads
+        - generic [ref=f38e83]:
+          - text: Ad closed by
+          - img [ref=f38e84]
+    - generic [ref=e126]:
+      - article [ref=e127]:
+        - heading "Falcon Shop" [level=2] [ref=e128]
+        - generic [ref=e130]:
+          - generic [ref=e131]: University Center
+          - generic [ref=e132]: 501 Wild Rose Avenue, River Falls, WI 54022-0000
+        - generic [ref=e133]:
+          - heading "Regular Hours" [level=3] [ref=e134]
+          - generic [ref=e135]:
+            - generic [ref=e136]:
+              - generic [ref=e137]: Monday - Friday
+              - generic [ref=e138]: 9:00AM - 4:00PM
+            - generic [ref=e139]:
+              - generic [ref=e140]: Saturday
+              - generic [ref=e141]: 10:00AM - 2:00PM
+            - generic [ref=e142]:
+              - generic [ref=e143]: Sunday
+              - generic [ref=e144]: Closed
+        - generic [ref=e145]:
+          - heading "Spring Break" [level=3] [ref=e146]
+          - generic [ref=e147]:
+            - generic [ref=e148]:
+              - generic [ref=e149]: Monday - Friday
+              - generic [ref=e150]: 10:00AM-2:00PM
+            - generic [ref=e151]:
+              - generic [ref=e152]: Saturday - Sunday
+              - generic [ref=e153]: CLOSED
+        - generic [ref=e154]:
+          - heading "Christmas through New Year" [level=3] [ref=e155]
+          - generic [ref=e157]:
+            - generic [ref=e158]: Monday - Sunday
+            - generic [ref=e159]: Closed
+        - generic [ref=e160]:
+          - heading "Winter Break Hours" [level=3] [ref=e161]
+          - generic [ref=e162]:
+            - generic [ref=e163]:
+              - generic [ref=e164]: Monday - Friday
+              - generic [ref=e165]: 10:00AM-2:00PM
+            - generic [ref=e166]:
+              - generic [ref=e167]: Saturday - Sunday
+              - generic [ref=e168]: Closed
+        - generic [ref=e169]:
+          - img [ref=e170]
+          - link "(715) 425-3962" [ref=e172] [cursor=pointer]:
+            - /url: tel:7154253962
+        - generic [ref=e173]:
+          - img [ref=e174]
+          - link "uwrf@bkstr.com" [ref=e177] [cursor=pointer]:
+            - /url: mailto:uwrf@bkstr.com
+      - generic [ref=e178]:
+        - iframe [ref=e179]:
+          - link "Open in Maps (opens in new tab)" [ref=f16e7] [cursor=pointer]:
+            - /url: about:invalid#zClosurez
+            - text: Open in Maps
+            - img [ref=f16e9]
+        - generic [ref=e180]:
+          - img [ref=e182]
+          - link "Open In Maps" [ref=e185] [cursor=pointer]:
+            - /url: https://maps.google.com/?q=University%20Center%2C%20501%20Wild%20Rose%20Avenue%2C%20River%20Falls%2C%20WI%2054022-0000
+    - iframe [ref=e191]:
+      - generic [active] [ref=f39e1]:
+        - link "Modera Woodbridge Modera Woodbridge Apartments CONTACT US" [ref=f39e4] [cursor=pointer]:
+          - /url: https://googleads.g.doubleclick.net/aclk?sa=l&ai=CLzS4Rb7LafeROO3j48APoNiBEJqL55mGAbuV167GELqy0_uODhABINrXxTlgyQagAZGd_ekoyAEG4AIAqAMByAMKqgSGAk_QYk4ZnAtucsYjtatcBz0Cpfp2HygQg5NRTvqJ_J1y0IPvv7E8FSbwVbp03PcJATtVCUscmb38edtkw1k9znvB_oWyRD9CT6KHatFiCxauQlG1puSNNShVgRnhygQjDUI-sZsRcOxM1bAdgSVfcHPVnad2PO3N5J0g2-xxyUcR8t_q1M6vFwOGGEMzZSZhiXkFosVxWa3JxmOPRaygFQ-4S5U8RC4FJLu6rBdspZCRuUTSyshCiLpyoKjrIC3pnd8PWuyG1IXsHVdSMxYv99mzIlUoWgCiRN_Be1WzyAwV2Cw8oh48r-Q6j493_Juwd6-WXqiLoAKd1MwJdqJdSBz3Ct7Bv_fABPTk3NybBOAEAYgFibv65EKAB5HVzckDqAenzLECqAemvhuoB8zOsQKoB_PRG6gHltgbqAeqm7ECqAeOzhuoB5PYG6gH8OAbqAfulrECqAf-nrECqAevvrECqAfVyRuoB9m2sQKoB5oGqAf_nrECqAffn7ECqAf4wrECqAf7wrEC2AcB0ggwCIBhEAEYnQEyCIqCgICAgIAIOg6AQIDAgICAgKiAAqiDEEi9_cE6WPXJ0oCSypMD8ggbYWR4LXN1YnN5bi01NDU3OTMxOTc4MzU4MTY2sQnvg5ROs94eoYAKA5gLAcgLAaoNAlVTyA0B4g0TCLn-0oCSypMDFe3xGAIdIGwAAuoNEwiUntWAksqTAxXt8RgCHSBsAALwDQKIDv___________wHYEw2IFAbQFQHKFgIKAPgWAYAXAbIXEBgBKgo4NDY2MTU2MzU0UAa6FwI4AaoYFwn_____N9wPQRIKODQ2NjE1NjM1NBgBshgJEgKTThgBIgEA0BgBwhkCCAE&ae=1&gclid=EAIaIQobChMIt8jZgJLKkwMV7fEYAh0gbAACEAEYASAAEgK3ZfD_BwE&num=1&cid=CAQS4wEABaugfUnbj28xHIqvX_AXKMr1sPfE5_wy-KsRPvUO_r0SPpb2HWvLqed_oYns9C2ZPfYPIgr6stvrpxPpyyAgSp6QljcGc1BiTQe0VguCPf3UtqCgozLr7e9h-V2qcNuuZtj4fljWXPjuxEZtHX-a7r8N7npmddKEBcZop80OP07zluBgWSNfjdbPdF64AHbxVE0S4JjqX-O6hDqNr6C1XkWSy5XDYHQNYyX83w83P_98yl6YM14hC-Hsv5y6vXeFV2CUgVZrCpguZ-Cet6i4I7XTscRhh1FjY5FMWrbdDwtJdxgB&sig=AOD64_0SkSRg9rGhevjIwIPaQINPVdHk7A&client=ca-pub-3605257360853185&rf=4&nb=2&adurl=https://www.moderawoodbridge.com/%3Fswitch_cls%5Bid%5D%3D94595%26gad_source%3D5%26gad_campaignid%3D17928461705%26gclid%3DEAIaIQobChMIt8jZgJLKkwMV7fEYAh0gbAACEAEYASAAEgK3ZfD_BwE
+          - generic [ref=f39e5]:
+            - generic [ref=f39e8]:
+              - generic "Modera Woodbridge" [ref=f39e9]:
+                - link "Modera Woodbridge" [ref=f39e10]
+              - generic "Modera Woodbridge" [ref=f39e11]:
+                - link "Modera Woodbridge Apartments" [ref=f39e12]
+            - link "CONTACT US" [ref=f39e14]:
+              - generic [ref=f39e15]:
+                - generic:
+                  - generic: CONTACT US
+        - generic [ref=f39e17]:
+          - link [ref=f39e19] [cursor=pointer]:
+            - /url: https://adssettings.google.com/whythisad?source=display&reasons=AcrBLeXLugp7bloEbpFURNR3eY1tmRdBg91mIuN0N-z0n5mPp19ZvufH4O4c2JVCzzTdQ-LhWiRETIHLqUIoi9BFifFfGvc9oOFUoBB9CXpVfNGj_rlpth8DteC_gyquyW8U0DHWDy7miVUY_QE4lnkgDJn9LkjR0dJ5-OVycPAMLN7qXxEr-4MTsywW2LU7pKQzHz5xD7zHxWuqVCzp0q3rpK1Qdn-O9WzcAi-55Rl_a6t4qlHai1je1B6uLTAqaiCPp7dQFrWg9NvDTaEccVzj8-IavzrhFSlRJyFegLuZ5xtb-65pg-5u6VyMEz65RQRfCXCltCaWUzIKTbDAETod7slH4YfB1jfmvFFZ6VtlmhN1YWdjyx2ZZRIzSdIHftR9RzfZF-JpJXxUvhr3CX_VsUOSKrZ-awxuE3z1U8q6nTIBzyhVsjryUNuqDPRlzteyEACmMwje2vy_I4odjZohzlf5zaNnKgsUYbsmhFYCe5sdkT18dOqnzwJ7i7IUJQv7aQP5_ELOE4kzfVaMCv9GZf3f3PALACMO7O-zqB_vJxCW-d31L9zFLNDZBj4Np39QSBtqP_9FwBuh-i91uuUHe1V5duk4TBj8vGQmshreQxeRHtlDz_J0rGocM9sF5PAsFce-uYHJwWI-wESM8jPT7apN11AwPzIDOK4LklU4Oh5MRayoyAKxAXggK4yXeSIGq7XUVVMSaIZ9iuO-hekeUngdMQH_I3wuU0HWotVLnR5cz-L059PbQ1XYCoMzII4DppPiZjG9WhNxjrRq9ppwzLFSXerZFmniTqpVuPjHO2xllk_x5SLgi56hTpH45rqNh5Ca2zAod8bwl25fDm_NpcjYy5F8n63IVPpOb-zJad_ta63yfBKw1JCsJIY9cS2Nb4R8f5C9kPLmhBWfVifgHarau1g-wZSmWCiAwr2d6r4EhlFgJt08ATbUnySptmsIM9AEfMTDrAYrpto_GGkfNFnr9D67jxrCLb3gyikxAhL4d-JkDI-6JVr9Ai7k9Mj5IAsrcBSouw5lYWoBcsxrkKgLzjJ5tQD3JLZckry_ngUi7yvQe2e3oRBiQmMvk71Z5VJ3PHpTB2UloHB0ZmdOW4tJ8T9CzsEtbDX0wn-EVd9JRoVKSsNAfjbJ8Zpm5g1mABzJx4S9Ul5bQ8wf8vfF4eKxCp3bhGoN6VYRODjL-MkDd6p_HmzZQKfhM0sPFnrZeHKAA-xjXjCmmZwcZiQDKnftcPtGH5dq6WO04le9ipMPWMiYOAwvGCYKrl6ADjq34ZiAOKY7euzf0fKgzONu6oX_TXAjCZ3sgmtIX_HzKVHqlRfdV48-QyiwD-5agjOpjFW6uAsO-mthOCuuMtQjZr70-tfBolNVFZ_1Q5Tmkmqb_uJmL1SZdMhufK6aBlMd5LiSe2M3LNQ_xmBVSydLFeGdxf58FHa93qM_JfWpReCU2M7Qqz9GJWFPK9abeX72vpbmRu_9mzuhxt0LQa__KpaejfVkJJPXjxNYvJenKZm49WtQCdeTVSyC18ea-LVyd-NPBiw0jrICvYOZfO-qAbjfvssuMjd1S2oDuCk6YQBlmV3zDJqdKsZ_c0ililrHt7hfnHsYLNVocqUdwYjI0eCmnvU59CuWjsstpAvgszW8FGwfO4ED-G2vVBdvQy-xYoFMu5RaQLvJz2EXPMq3x6KpZ7aMjXms3Vvk09NsJKXz9WcFOlO4Fa6v3MMWXxDAq0hFZ1j4iJs_DdtCX525tAWTd1O2NffdZ132ni_GD4zn1uXvJT5hkE0gT5lZsQYnRVJrM_flCpLXSrOjmTYCG9nuPX1JaJli-rho36ivrSOY7dsaigE6G1-9XwpxmFU0l__E_91VfH3SipsaYQm1NX3I9JOayMOIh4Po85PQLRzZXNs4gkKfI9lHoKzMz7ErY3lEC_fagYB_92yXor22UCJsciVReDYjy2N322zSu4LR4xZBEaAGEvZFz4S3f8y-Wm1KKdJJVFEEPBcFYzTlCXTfkka5vZXzrBOhua0J0OcL86BV5ZrOX2bJvtASg5KOLlYmku09wPUY7ZkVFJ228w1iCPll5zQypnq27XdOcmLhNfCwNCwQDdJc26vGdrBxJMOXLZQ3G_ZdxTQzEhlbZlQN80eqJfcc86PSX_sXLws1QHf_SJzOgMGESMG3_C07w_cvfGeGk9GdPPJUCTkO-m1Atr1XV0oLh9MCz0wpuPTLJdNPFBHoMfXddXcpcCppZcf7zM7I6C6rAL72Sy9OMts939anVj56mjwfGuLF3rpQ2Hexo46W4OVlGyF-mOfqpE8wD_OPKpytJXPg26jTgap31FegPIEkNIrbbu2PQxqMaDouhpsFAc1me9tjgK2pCQis6Yx7Hw89pw9ilezxPu2lCdOxWCAUmljYD7UGOOOHEFrbwgF3OJ0nfZFDuzvWdP0i_-jHfpWyFEjOsTlMpuicwhKy4gbLo0f-MPphQ89ESWPRt23tpxR1ls_dETBq6KySvAGPZ1I7E55jHtWKzjLQncoba-ASWnKlEIFP00-IAz6hEpJoChc906QwIzab_huzZkfZiIvDyJaoWDQ6PCs5wuu7dAV9vg_7&opi=122715837
+            - img [ref=f39e21]
+          - link [ref=f39e23] [cursor=pointer]:
+            - /url: https://adssettings.google.com/whythisad?source=display&reasons=AcrBLeXLugp7bloEbpFURNR3eY1tmRdBg91mIuN0N-z0n5mPp19ZvufH4O4c2JVCzzTdQ-LhWiRETIHLqUIoi9BFifFfGvc9oOFUoBB9CXpVfNGj_rlpth8DteC_gyquyW8U0DHWDy7miVUY_QE4lnkgDJn9LkjR0dJ5-OVycPAMLN7qXxEr-4MTsywW2LU7pKQzHz5xD7zHxWuqVCzp0q3rpK1Qdn-O9WzcAi-55Rl_a6t4qlHai1je1B6uLTAqaiCPp7dQFrWg9NvDTaEccVzj8-IavzrhFSlRJyFegLuZ5xtb-65pg-5u6VyMEz65RQRfCXCltCaWUzIKTbDAETod7slH4YfB1jfmvFFZ6VtlmhN1YWdjyx2ZZRIzSdIHftR9RzfZF-JpJXxUvhr3CX_VsUOSKrZ-awxuE3z1U8q6nTIBzyhVsjryUNuqDPRlzteyEACmMwje2vy_I4odjZohzlf5zaNnKgsUYbsmhFYCe5sdkT18dOqnzwJ7i7IUJQv7aQP5_ELOE4kzfVaMCv9GZf3f3PALACMO7O-zqB_vJxCW-d31L9zFLNDZBj4Np39QSBtqP_9FwBuh-i91uuUHe1V5duk4TBj8vGQmshreQxeRHtlDz_J0rGocM9sF5PAsFce-uYHJwWI-wESM8jPT7apN11AwPzIDOK4LklU4Oh5MRayoyAKxAXggK4yXeSIGq7XUVVMSaIZ9iuO-hekeUngdMQH_I3wuU0HWotVLnR5cz-L059PbQ1XYCoMzII4DppPiZjG9WhNxjrRq9ppwzLFSXerZFmniTqpVuPjHO2xllk_x5SLgi56hTpH45rqNh5Ca2zAod8bwl25fDm_NpcjYy5F8n63IVPpOb-zJad_ta63yfBKw1JCsJIY9cS2Nb4R8f5C9kPLmhBWfVifgHarau1g-wZSmWCiAwr2d6r4EhlFgJt08ATbUnySptmsIM9AEfMTDrAYrpto_GGkfNFnr9D67jxrCLb3gyikxAhL4d-JkDI-6JVr9Ai7k9Mj5IAsrcBSouw5lYWoBcsxrkKgLzjJ5tQD3JLZckry_ngUi7yvQe2e3oRBiQmMvk71Z5VJ3PHpTB2UloHB0ZmdOW4tJ8T9CzsEtbDX0wn-EVd9JRoVKSsNAfjbJ8Zpm5g1mABzJx4S9Ul5bQ8wf8vfF4eKxCp3bhGoN6VYRODjL-MkDd6p_HmzZQKfhM0sPFnrZeHKAA-xjXjCmmZwcZiQDKnftcPtGH5dq6WO04le9ipMPWMiYOAwvGCYKrl6ADjq34ZiAOKY7euzf0fKgzONu6oX_TXAjCZ3sgmtIX_HzKVHqlRfdV48-QyiwD-5agjOpjFW6uAsO-mthOCuuMtQjZr70-tfBolNVFZ_1Q5Tmkmqb_uJmL1SZdMhufK6aBlMd5LiSe2M3LNQ_xmBVSydLFeGdxf58FHa93qM_JfWpReCU2M7Qqz9GJWFPK9abeX72vpbmRu_9mzuhxt0LQa__KpaejfVkJJPXjxNYvJenKZm49WtQCdeTVSyC18ea-LVyd-NPBiw0jrICvYOZfO-qAbjfvssuMjd1S2oDuCk6YQBlmV3zDJqdKsZ_c0ililrHt7hfnHsYLNVocqUdwYjI0eCmnvU59CuWjsstpAvgszW8FGwfO4ED-G2vVBdvQy-xYoFMu5RaQLvJz2EXPMq3x6KpZ7aMjXms3Vvk09NsJKXz9WcFOlO4Fa6v3MMWXxDAq0hFZ1j4iJs_DdtCX525tAWTd1O2NffdZ132ni_GD4zn1uXvJT5hkE0gT5lZsQYnRVJrM_flCpLXSrOjmTYCG9nuPX1JaJli-rho36ivrSOY7dsaigE6G1-9XwpxmFU0l__E_91VfH3SipsaYQm1NX3I9JOayMOIh4Po85PQLRzZXNs4gkKfI9lHoKzMz7ErY3lEC_fagYB_92yXor22UCJsciVReDYjy2N322zSu4LR4xZBEaAGEvZFz4S3f8y-Wm1KKdJJVFEEPBcFYzTlCXTfkka5vZXzrBOhua0J0OcL86BV5ZrOX2bJvtASg5KOLlYmku09wPUY7ZkVFJ228w1iCPll5zQypnq27XdOcmLhNfCwNCwQDdJc26vGdrBxJMOXLZQ3G_ZdxTQzEhlbZlQN80eqJfcc86PSX_sXLws1QHf_SJzOgMGESMG3_C07w_cvfGeGk9GdPPJUCTkO-m1Atr1XV0oLh9MCz0wpuPTLJdNPFBHoMfXddXcpcCppZcf7zM7I6C6rAL72Sy9OMts939anVj56mjwfGuLF3rpQ2Hexo46W4OVlGyF-mOfqpE8wD_OPKpytJXPg26jTgap31FegPIEkNIrbbu2PQxqMaDouhpsFAc1me9tjgK2pCQis6Yx7Hw89pw9ilezxPu2lCdOxWCAUmljYD7UGOOOHEFrbwgF3OJ0nfZFDuzvWdP0i_-jHfpWyFEjOsTlMpuicwhKy4gbLo0f-MPphQ89ESWPRt23tpxR1ls_dETBq6KySvAGPZ1I7E55jHtWKzjLQncoba-ASWnKlEIFP00-IAz6hEpJoChc906QwIzab_huzZkfZiIvDyJaoWDQ6PCs5wuu7dAV9vg_7&opi=122715837
+            - img [ref=f39e25]
+        - img [ref=f39e28] [cursor=pointer]
+        - generic [ref=f39e39]:
+          - img [ref=f39e42]
+          - generic [ref=f39e45]:
+            - text: Ads by
+            - img [ref=f39e46]
+          - generic [ref=f39e49]:
+            - generic [ref=f39e52] [cursor=pointer]: Send feedback
+            - link [ref=f39e54] [cursor=pointer]:
+              - /url: https://adssettings.google.com/whythisad?source=display&reasons=AcrBLeXLugp7bloEbpFURNR3eY1tmRdBg91mIuN0N-z0n5mPp19ZvufH4O4c2JVCzzTdQ-LhWiRETIHLqUIoi9BFifFfGvc9oOFUoBB9CXpVfNGj_rlpth8DteC_gyquyW8U0DHWDy7miVUY_QE4lnkgDJn9LkjR0dJ5-OVycPAMLN7qXxEr-4MTsywW2LU7pKQzHz5xD7zHxWuqVCzp0q3rpK1Qdn-O9WzcAi-55Rl_a6t4qlHai1je1B6uLTAqaiCPp7dQFrWg9NvDTaEccVzj8-IavzrhFSlRJyFegLuZ5xtb-65pg-5u6VyMEz65RQRfCXCltCaWUzIKTbDAETod7slH4YfB1jfmvFFZ6VtlmhN1YWdjyx2ZZRIzSdIHftR9RzfZF-JpJXxUvhr3CX_VsUOSKrZ-awxuE3z1U8q6nTIBzyhVsjryUNuqDPRlzteyEACmMwje2vy_I4odjZohzlf5zaNnKgsUYbsmhFYCe5sdkT18dOqnzwJ7i7IUJQv7aQP5_ELOE4kzfVaMCv9GZf3f3PALACMO7O-zqB_vJxCW-d31L9zFLNDZBj4Np39QSBtqP_9FwBuh-i91uuUHe1V5duk4TBj8vGQmshreQxeRHtlDz_J0rGocM9sF5PAsFce-uYHJwWI-wESM8jPT7apN11AwPzIDOK4LklU4Oh5MRayoyAKxAXggK4yXeSIGq7XUVVMSaIZ9iuO-hekeUngdMQH_I3wuU0HWotVLnR5cz-L059PbQ1XYCoMzII4DppPiZjG9WhNxjrRq9ppwzLFSXerZFmniTqpVuPjHO2xllk_x5SLgi56hTpH45rqNh5Ca2zAod8bwl25fDm_NpcjYy5F8n63IVPpOb-zJad_ta63yfBKw1JCsJIY9cS2Nb4R8f5C9kPLmhBWfVifgHarau1g-wZSmWCiAwr2d6r4EhlFgJt08ATbUnySptmsIM9AEfMTDrAYrpto_GGkfNFnr9D67jxrCLb3gyikxAhL4d-JkDI-6JVr9Ai7k9Mj5IAsrcBSouw5lYWoBcsxrkKgLzjJ5tQD3JLZckry_ngUi7yvQe2e3oRBiQmMvk71Z5VJ3PHpTB2UloHB0ZmdOW4tJ8T9CzsEtbDX0wn-EVd9JRoVKSsNAfjbJ8Zpm5g1mABzJx4S9Ul5bQ8wf8vfF4eKxCp3bhGoN6VYRODjL-MkDd6p_HmzZQKfhM0sPFnrZeHKAA-xjXjCmmZwcZiQDKnftcPtGH5dq6WO04le9ipMPWMiYOAwvGCYKrl6ADjq34ZiAOKY7euzf0fKgzONu6oX_TXAjCZ3sgmtIX_HzKVHqlRfdV48-QyiwD-5agjOpjFW6uAsO-mthOCuuMtQjZr70-tfBolNVFZ_1Q5Tmkmqb_uJmL1SZdMhufK6aBlMd5LiSe2M3LNQ_xmBVSydLFeGdxf58FHa93qM_JfWpReCU2M7Qqz9GJWFPK9abeX72vpbmRu_9mzuhxt0LQa__KpaejfVkJJPXjxNYvJenKZm49WtQCdeTVSyC18ea-LVyd-NPBiw0jrICvYOZfO-qAbjfvssuMjd1S2oDuCk6YQBlmV3zDJqdKsZ_c0ililrHt7hfnHsYLNVocqUdwYjI0eCmnvU59CuWjsstpAvgszW8FGwfO4ED-G2vVBdvQy-xYoFMu5RaQLvJz2EXPMq3x6KpZ7aMjXms3Vvk09NsJKXz9WcFOlO4Fa6v3MMWXxDAq0hFZ1j4iJs_DdtCX525tAWTd1O2NffdZ132ni_GD4zn1uXvJT5hkE0gT5lZsQYnRVJrM_flCpLXSrOjmTYCG9nuPX1JaJli-rho36ivrSOY7dsaigE6G1-9XwpxmFU0l__E_91VfH3SipsaYQm1NX3I9JOayMOIh4Po85PQLRzZXNs4gkKfI9lHoKzMz7ErY3lEC_fagYB_92yXor22UCJsciVReDYjy2N322zSu4LR4xZBEaAGEvZFz4S3f8y-Wm1KKdJJVFEEPBcFYzTlCXTfkka5vZXzrBOhua0J0OcL86BV5ZrOX2bJvtASg5KOLlYmku09wPUY7ZkVFJ228w1iCPll5zQypnq27XdOcmLhNfCwNCwQDdJc26vGdrBxJMOXLZQ3G_ZdxTQzEhlbZlQN80eqJfcc86PSX_sXLws1QHf_SJzOgMGESMG3_C07w_cvfGeGk9GdPPJUCTkO-m1Atr1XV0oLh9MCz0wpuPTLJdNPFBHoMfXddXcpcCppZcf7zM7I6C6rAL72Sy9OMts939anVj56mjwfGuLF3rpQ2Hexo46W4OVlGyF-mOfqpE8wD_OPKpytJXPg26jTgap31FegPIEkNIrbbu2PQxqMaDouhpsFAc1me9tjgK2pCQis6Yx7Hw89pw9ilezxPu2lCdOxWCAUmljYD7UGOOOHEFrbwgF3OJ0nfZFDuzvWdP0i_-jHfpWyFEjOsTlMpuicwhKy4gbLo0f-MPphQ89ESWPRt23tpxR1ls_dETBq6KySvAGPZ1I7E55jHtWKzjLQncoba-ASWnKlEIFP00-IAz6hEpJoChc906QwIzab_huzZkfZiIvDyJaoWDQ6PCs5wuu7dAV9vg_7&opi=122715837
+              - generic [ref=f39e55]:
+                - text: Why this ad?
+                - img [ref=f39e56]
+        - generic [ref=f39e59]:
+          - generic [ref=f39e62] [cursor=pointer]: Ad covered content
+          - generic [ref=f39e65] [cursor=pointer]: Ad was inappropriate
+          - generic [ref=f39e68] [cursor=pointer]: Not interested in this ad
+          - generic [ref=f39e71] [cursor=pointer]: Seen this ad multiple times
+        - generic [ref=f39e77]: Thanks. Feedback improves Google ads
+        - generic [ref=f39e83]:
+          - text: Ad closed by
+          - img [ref=f39e84]
+  - generic [ref=e195]:
+    - img "Campus logo" [ref=e198]
+    - generic [ref=e200]:
+      - heading "Every purchase directly benefits the campus community." [level=2] [ref=e201]
+      - paragraph [ref=e202]: From student scholarships, to new programs, your dollars make a difference in shaping a brighter academic future.
+  - contentinfo [ref=e203]:
+    - generic [ref=e209]:
+      - generic [ref=e210]:
+        - img "University of Wisconsin-River Falls" [ref=e212]
+        - generic [ref=e213]:
+          - generic [ref=e214]: Join Our Email List & Get 10% Off
+          - generic [ref=e215]: Get exclusive deals and early access to new products.
+          - generic [ref=e216]:
+            - generic [ref=e217]: Email
+            - generic [ref=e218]:
+              - textbox "Email" [ref=e219]:
+                - /placeholder: Enter your email
+              - button "Subscribe" [ref=e220] [cursor=pointer]
+            - paragraph [ref=e221]:
+              - text: By providing my email, I accept the
+              - link "Terms of Use" [ref=e222] [cursor=pointer]:
+                - /url: https://follett.com/terms-of-use/
+              - text: ","
+              - link "Privacy Policy" [ref=e223] [cursor=pointer]:
+                - /url: https://follett.com/policies/
+              - text: ", and"
+              - link "Cookie Preference Policy" [ref=e224] [cursor=pointer]:
+                - /url: "#"
+              - text: .
+          - generic:
+            - generic:
+              - img
+              - generic: Thanks for subscribing!
+              - button "Close": ×
+      - generic [ref=e225]:
+        - generic [ref=e226]:
+          - heading "Address" [level=3] [ref=e227]
+          - generic [ref=e228]: University Center, 501 Wild Rose Avenue, River Falls, WI 54022-0000
+          - link "(715) 425-3962" [ref=e230] [cursor=pointer]:
+            - /url: tel:7154253962
+          - link "uwrf@bkstr.com" [ref=e232] [cursor=pointer]:
+            - /url: mailto:uwrf@bkstr.com
+        - group [ref=e234]:
+          - generic "Company" [ref=e235]:
+            - heading "Company" [level=3] [ref=e236]
+          - list [ref=e238]:
+            - listitem [ref=e239]:
+              - link "View Store Hours" [ref=e240] [cursor=pointer]:
+                - /url: /pages/view-store-hours
+            - listitem [ref=e241]:
+              - link "Contact" [ref=e242] [cursor=pointer]:
+                - /url: /pages/contact
+        - group [ref=e244]:
+          - generic "Textbooks" [ref=e245]:
+            - heading "Textbooks" [level=3] [ref=e246]
+          - list [ref=e248]:
+            - listitem [ref=e249]:
+              - link "Find Your Textbooks" [ref=e250] [cursor=pointer]:
+                - /url: /pages/course-materials-results
+            - listitem [ref=e251]:
+              - link "Sell Your Textbooks" [ref=e252] [cursor=pointer]:
+                - /url: /pages/faq-sell-your-textbooks
+            - listitem [ref=e253]:
+              - link "Textbook FAQs" [ref=e254] [cursor=pointer]:
+                - /url: /pages/faq-textbooks
+            - listitem [ref=e255]:
+              - link "In-Store Price Match Guarantee" [ref=e256] [cursor=pointer]:
+                - /url: /pages/price-match-guarantee
+            - listitem [ref=e257]:
+              - link "Register for Text Rental" [ref=e258] [cursor=pointer]:
+                - /url: /pages/faq-rentals
+        - group [ref=e260]:
+          - generic "Support" [ref=e261]:
+            - heading "Support" [level=3] [ref=e262]
+          - list [ref=e264]:
+            - listitem [ref=e265]:
+              - link "Track an Order" [ref=e266] [cursor=pointer]:
+                - /url: /account/orders
+            - listitem [ref=e267]:
+              - link "Delivery Options" [ref=e268] [cursor=pointer]:
+                - /url: /pages/faq-shipping-delivery
+            - listitem [ref=e269]:
+              - link "Payments Accepted" [ref=e270] [cursor=pointer]:
+                - /url: /pages/faq-orders
+            - listitem [ref=e271]:
+              - link "Returns" [ref=e272] [cursor=pointer]:
+                - /url: /pages/faq-online-return-policy
+            - listitem [ref=e273]:
+              - link "Help/FAQ" [ref=e274] [cursor=pointer]:
+                - /url: /pages/faq
+            - listitem [ref=e275]:
+              - link "Accessibility" [ref=e276] [cursor=pointer]:
+                - /url: /pages/faq-accessibility-browser-support
+      - generic [ref=e278]:
+        - generic [ref=e279]: © 2026 Follett Higher Education
+        - generic [ref=e280]:
+          - link "Terms of Use" [ref=e281] [cursor=pointer]:
+            - /url: https://follett.com/terms-of-use/
+          - link "Privacy Policy" [ref=e282] [cursor=pointer]:
+            - /url: https://follett.com/policies/
+          - link "Do Not Sell My Info – CA" [ref=e283] [cursor=pointer]:
+            - /url: https://privacyportal-cdn.onetrust.com/dsarwebform/d874582a-c10e-4b93-bdba-7f74cfaded74/c11baae7-b240-4c76-bea2-737c15a7fb2a.html
+          - link "Cookie Preference Policy" [ref=e284] [cursor=pointer]:
+            - /url: javascript:OneTrust.ToggleInfoDisplay()
+        - link "Site Map" [ref=e286] [cursor=pointer]:
+          - /url: /pages/sitemap
+```

@@ -1,0 +1,13 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "Send API Request to jsonplaceholder",
+			"command": "node ./node_modules/api-mcp-tester/bin/tools/index.js sendApiRequest --url https://jsonplaceholder.typicode.com/posts/1 --method GET",
+			"args": [],
+			"isBackground": false,
+			"group": "test"
+		}
+	]
+}

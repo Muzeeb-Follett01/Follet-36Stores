@@ -1,0 +1,118 @@
+name: Playwright Store Tests
+
+on:
+  # Manual trigger with inputs
+  workflow_dispatch:
+    inputs:
+      store_id:
+        description: "Store ID (4-digit, e.g. 0026)"
+        required: true
+        default: "0026"
+      excel_file:
+        description: "Excel file name (e.g. bkstr-0026.xlsx)"
+        required: true
+        default: "bkstr-0026.xlsx"
+      browser:
+        description: "Browser to use"
+        required: true
+        default: "Google Chrome"
+        type: choice
+        options:
+          - Google Chrome
+          - chromium
+          - firefox
+          - webkit
+      upload_to_jira:
+        description: "Upload results to Jira after tests?"
+        required: true
+        default: "true"
+        type: choice
+        options:
+          - "true"
+          - "false"
+
+env:
+  NODE_OPTIONS: ""
+
+jobs:
+  playwright-tests:
+    name: "Store ${{ github.event.inputs.store_id }} — 12 Specs"
+    runs-on: windows-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci --legacy-peer-deps
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Run all 12 spec files
+        run: |
+          npx playwright test `
+            tests/tdd/TMSHOP-450.spec.ts `
+            tests/tdd/TMSHOP-453.spec.ts `
+            tests/tdd/TMSHOP-454.spec.ts `
+            tests/tdd/TMSHOP-455.spec.ts `
+            tests/tdd/TMSHOP-456.spec.ts `
+            tests/tdd/TMSHOP-457.spec.ts `
+            tests/tdd/TMSHOP-458.spec.ts `
+            tests/tdd/TMSHOP-459.spec.ts `
+            tests/tdd/TMSHOP-460.spec.ts `
+            tests/tdd/TMSHOP-461.spec.ts `
+            tests/tdd/TMSHOP-462.spec.ts `
+            tests/tdd/TMSHOP-463.spec.ts `
+            --project="${{ github.event.inputs.browser }}" `
+            --workers=1 `
+            --reporter=dot,junit,html
+        env:
+          CI: true
+          EXCEL_FILE: ${{ github.event.inputs.excel_file }}
+        continue-on-error: true
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results-${{ github.event.inputs.store_id }}
+          path: |
+            test-results/${{ github.event.inputs.store_id }}/
+            playwright-report/
+            notify-results/test-results.xml
+          retention-days: 30
+
+      - name: Upload screenshots and videos
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: screenshots-videos-${{ github.event.inputs.store_id }}
+          path: test-results/${{ github.event.inputs.store_id }}/
+          retention-days: 30
+
+      - name: Attach results to Jira
+        if: github.event.inputs.upload_to_jira == 'true' && always()
+        run: |
+          npx ts-node --transpile-only scripts/jiraAttach.ts ${{ github.event.inputs.store_id }}
+        env:
+          JIRA_BASE_URL: ${{ secrets.JIRA_BASE_URL }}
+          JIRA_PROJECT_KEY: TMSHOP
+          JIRA_USERNAME: ${{ secrets.JIRA_USERNAME }}
+          JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
+
+      - name: Publish test summary
+        if: always()
+        uses: dorny/test-reporter@v1
+        with:
+          name: "Playwright Results — Store ${{ github.event.inputs.store_id }}"
+          path: notify-results/test-results.xml
+          reporter: java-junit
+          fail-on-error: false

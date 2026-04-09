@@ -1,0 +1,192 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e3]:
+    - generic [ref=e6]:
+      - link "Dyersburg State CC Bookstore - Dyersburg" [ref=e8] [cursor=pointer]:
+        - /url: /
+        - img "Dyersburg State CC Bookstore - Dyersburg" [ref=e10]
+      - navigation [ref=e14]:
+        - generic [ref=e16]:
+          - list:
+            - generic:
+              - link "Shop By" [ref=e17] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=e18]: Shop By
+              - link "New Arrivals" [ref=e19] [cursor=pointer]:
+                - /url: /collections/new-arrivals?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                - generic [ref=e20]: New Arrivals
+              - link [ref=e21] [cursor=pointer]:
+                - /url: /collections/new-arrivals
+                - text: New Arrivals
+              - link "Men" [ref=e22] [cursor=pointer]:
+                - /url: /collections/men?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                - generic [ref=e23]: Men
+              - link [ref=e24] [cursor=pointer]:
+                - /url: /collections/men
+                - text: Men
+              - link "Women" [ref=e25] [cursor=pointer]:
+                - /url: /collections/women?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                - generic [ref=e26]: Women
+              - link [ref=e27] [cursor=pointer]:
+                - /url: /collections/women
+                - text: Women
+              - link "Headwear" [ref=e28] [cursor=pointer]:
+                - /url: /collections/hats?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                - generic [ref=e29]: Headwear
+              - link [ref=e30] [cursor=pointer]:
+                - /url: /collections/hats
+                - text: Headwear
+              - link "Gifts" [ref=e31] [cursor=pointer]:
+                - /url: /collections/gifts?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                - generic [ref=e32]: Gifts
+              - link [ref=e33] [cursor=pointer]:
+                - /url: /collections/gifts
+                - text: Gifts
+              - link "Textbooks" [ref=e34] [cursor=pointer]:
+                - /url: /pages/courses-materials-results
+                - generic [ref=e36]:
+                  - text: Textbooks
+                  - img
+      - generic [ref=e37]:
+        - search "Search" [ref=e40]:
+          - search [ref=e41]:
+            - generic [ref=e43]:
+              - generic:
+                - img
+              - generic [ref=e44]: Search
+              - combobox "Search" [ref=e45]
+        - generic [ref=e46]:
+          - button "Open account menu" [ref=e48] [cursor=pointer]:
+            - img [ref=e50]
+          - 'button "Open bag Total items in bag: 0" [ref=e54] [cursor=pointer]':
+            - generic [ref=e55]:
+              - generic:
+                - img
+              - generic [ref=e56]:
+                - status:
+                  - generic [ref=e58]: "Total items in bag: 0"
+  - main [ref=e59]:
+    - generic [ref=e63]:
+      - heading "Search results" [level=3] [ref=e65]
+      - search [ref=e66]:
+        - generic [ref=e67]:
+          - generic [ref=e68]: Search
+          - generic:
+            - img
+          - searchbox "Search" [ref=e69]: "Developmental Profiles: Pre-Birth Through Adolescence"
+          - button "Reset search" [ref=e70] [cursor=pointer]:
+            - generic:
+              - img
+    - generic [ref=e77]:
+      - heading "No products found." [level=2] [ref=e78]
+      - paragraph [ref=e79]:
+        - text: Try using fewer filters, or
+        - link "clear all filters" [ref=e80] [cursor=pointer]:
+          - /url: /search?type=product?type=product
+        - text: .
+  - contentinfo [ref=e81]:
+    - generic [ref=e87]:
+      - generic [ref=e88]:
+        - img "Dyersburg State Community College" [ref=e90]
+        - generic [ref=e91]:
+          - generic [ref=e92]: Join Our Email List & Get 10% Off
+          - generic [ref=e93]: Get exclusive deals and early access to new products.
+          - generic [ref=e94]:
+            - generic [ref=e95]: Email
+            - generic [ref=e96]:
+              - textbox "Email" [ref=e97]:
+                - /placeholder: Enter your email
+              - button "Subscribe" [ref=e98] [cursor=pointer]
+            - paragraph [ref=e99]:
+              - text: By providing my email, I accept the
+              - link "Terms of Use" [ref=e100] [cursor=pointer]:
+                - /url: https://follett.com/terms-of-use/
+              - text: ","
+              - link "Privacy Policy" [ref=e101] [cursor=pointer]:
+                - /url: https://follett.com/policies/
+              - text: ", and"
+              - link "Cookie Preference Policy" [ref=e102] [cursor=pointer]:
+                - /url: "#"
+              - text: .
+          - generic:
+            - generic:
+              - img
+              - generic: Thanks for subscribing!
+              - button "Close": ×
+      - generic [ref=e103]:
+        - generic [ref=e104]:
+          - heading "Address" [level=3] [ref=e105]
+          - generic [ref=e106]: 1510 Lake Road, Dyersburg, TN 38024
+          - link "731-286-3241" [ref=e108] [cursor=pointer]:
+            - /url: tel:7312863241
+          - link "dscc@follett.com" [ref=e110] [cursor=pointer]:
+            - /url: mailto:dscc@follett.com
+        - group [ref=e112]:
+          - generic "Company" [ref=e113]:
+            - heading "Company" [level=3] [ref=e114]
+          - list [ref=e116]:
+            - listitem [ref=e117]:
+              - link "View Store Hours" [ref=e118] [cursor=pointer]:
+                - /url: /pages/view-store-hours
+            - listitem [ref=e119]:
+              - link "Contact" [ref=e120] [cursor=pointer]:
+                - /url: /pages/contact
+        - group [ref=e122]:
+          - generic "Textbooks" [ref=e123]:
+            - heading "Textbooks" [level=3] [ref=e124]
+          - list [ref=e126]:
+            - listitem [ref=e127]:
+              - link "Find Your Textbooks" [ref=e128] [cursor=pointer]:
+                - /url: /pages/course-materials-results
+            - listitem [ref=e129]:
+              - link "Sell Your Textbooks" [ref=e130] [cursor=pointer]:
+                - /url: /pages/faq-sell-your-textbooks
+            - listitem [ref=e131]:
+              - link "Textbook FAQs" [ref=e132] [cursor=pointer]:
+                - /url: /pages/faq-textbooks
+            - listitem [ref=e133]:
+              - link "In-Store Price Match Guarantee" [ref=e134] [cursor=pointer]:
+                - /url: /pages/price-match-guarantee
+            - listitem [ref=e135]:
+              - link "Register for Text Rental" [ref=e136] [cursor=pointer]:
+                - /url: /pages/faq-rentals
+        - group [ref=e138]:
+          - generic "Support" [ref=e139]:
+            - heading "Support" [level=3] [ref=e140]
+          - list [ref=e142]:
+            - listitem [ref=e143]:
+              - link "Track an Order" [ref=e144] [cursor=pointer]:
+                - /url: /account/orders
+            - listitem [ref=e145]:
+              - link "Delivery Options" [ref=e146] [cursor=pointer]:
+                - /url: /pages/faq-shipping-delivery
+            - listitem [ref=e147]:
+              - link "Payments Accepted" [ref=e148] [cursor=pointer]:
+                - /url: /pages/faq-orders
+            - listitem [ref=e149]:
+              - link "Returns" [ref=e150] [cursor=pointer]:
+                - /url: /pages/faq-online-return-policy
+            - listitem [ref=e151]:
+              - link "Help/FAQ" [ref=e152] [cursor=pointer]:
+                - /url: /pages/faq
+            - listitem [ref=e153]:
+              - link "Accessibility" [ref=e154] [cursor=pointer]:
+                - /url: /pages/faq-accessibility-browser-support
+      - generic [ref=e156]:
+        - generic [ref=e157]: © 2026 Follett Higher Education
+        - generic [ref=e158]:
+          - link "Terms of Use" [ref=e159] [cursor=pointer]:
+            - /url: https://follett.com/terms-of-use/
+          - link "Privacy Policy" [ref=e160] [cursor=pointer]:
+            - /url: https://follett.com/policies/
+          - link "Do Not Sell My Info – CA" [ref=e161] [cursor=pointer]:
+            - /url: https://privacyportal-cdn.onetrust.com/dsarwebform/d874582a-c10e-4b93-bdba-7f74cfaded74/c11baae7-b240-4c76-bea2-737c15a7fb2a.html
+          - link "Cookie Preference Policy" [ref=e162] [cursor=pointer]:
+            - /url: javascript:OneTrust.ToggleInfoDisplay()
+        - link "Site Map" [ref=e164] [cursor=pointer]:
+          - /url: /pages/sitemap
+  - iframe [ref=e165]:
+    
+```

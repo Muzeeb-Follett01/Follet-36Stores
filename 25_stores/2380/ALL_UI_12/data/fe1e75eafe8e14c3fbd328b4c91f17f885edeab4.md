@@ -1,0 +1,488 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - banner [ref=e3]:
+    - generic [ref=e6]:
+      - link "The Hound Store at Assumption University" [ref=e8] [cursor=pointer]:
+        - /url: /
+        - img "The Hound Store at Assumption University" [ref=e10]
+      - navigation [ref=e14]:
+        - generic [ref=e16]:
+          - list:
+            - generic:
+              - link "Shop By" [expanded] [active] [ref=e17] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=e18]: Shop By
+              - generic [ref=e24]:
+                - list "Shop By categories" [ref=e26]:
+                  - listitem [ref=e27]:
+                    - link "Clothing & Accessories" [ref=e28] [cursor=pointer]:
+                      - /url: /collections/clothing-accessories?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                      - generic [ref=e29]: Clothing & Accessories
+                    - link [ref=e30] [cursor=pointer]:
+                      - /url: /collections/clothing-accessories
+                      - text: Clothing & Accessories
+                  - listitem [ref=e31]:
+                    - link "Gifts & Collectibles" [ref=e32] [cursor=pointer]:
+                      - /url: /collections/gifts-and-collectibles?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                      - generic [ref=e33]: Gifts & Collectibles
+                    - link [ref=e34] [cursor=pointer]:
+                      - /url: /collections/gifts-and-collectibles
+                      - text: Gifts & Collectibles
+                  - listitem [ref=e35]:
+                    - link "Specialty Shops" [ref=e36] [cursor=pointer]:
+                      - /url: /collections/specialty-shops?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                      - generic [ref=e37]: Specialty Shops
+                    - link [ref=e38] [cursor=pointer]:
+                      - /url: /collections/specialty-shops
+                      - text: Specialty Shops
+                  - listitem [ref=e39]:
+                    - link "Electronics" [ref=e40] [cursor=pointer]:
+                      - /url: /collections/electronics?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                      - generic [ref=e41]: Electronics
+                    - link [ref=e42] [cursor=pointer]:
+                      - /url: /collections/electronics
+                      - text: Electronics
+                  - listitem [ref=e43]:
+                    - link "School Supplies" [ref=e44] [cursor=pointer]:
+                      - /url: /collections/school-supplies?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                      - generic [ref=e45]: School Supplies
+                    - link [ref=e46] [cursor=pointer]:
+                      - /url: /collections/school-supplies
+                      - text: School Supplies
+                  - listitem [ref=e47]:
+                    - link "Alumni" [ref=e48] [cursor=pointer]:
+                      - /url: /collections/alumni?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                      - generic [ref=e49]: Alumni
+                    - link [ref=e50] [cursor=pointer]:
+                      - /url: /collections/alumni
+                      - text: Alumni
+                  - listitem [ref=e51]:
+                    - link "Graduation" [ref=e52] [cursor=pointer]:
+                      - /url: /collections/graduation?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                      - generic [ref=e53]: Graduation
+                    - link [ref=e54] [cursor=pointer]:
+                      - /url: /collections/graduation
+                      - text: Graduation
+                  - listitem [ref=e55]:
+                    - link "Dorm & Home" [ref=e56] [cursor=pointer]:
+                      - /url: /collections/dorm-and-home?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                      - generic [ref=e57]: Dorm & Home
+                    - link [ref=e58] [cursor=pointer]:
+                      - /url: /collections/dorm-and-home
+                      - text: Dorm & Home
+                  - listitem [ref=e59]:
+                    - link "Health, Wellness & Beauty" [ref=e60] [cursor=pointer]:
+                      - /url: /collections/health-wellness-and-beauty?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                      - generic [ref=e61]: Health, Wellness & Beauty
+                    - link [ref=e62] [cursor=pointer]:
+                      - /url: /collections/health-wellness-and-beauty
+                      - text: Health, Wellness & Beauty
+                  - listitem [ref=e63]:
+                    - link "Books, Music & Games" [ref=e64] [cursor=pointer]:
+                      - /url: /collections/books-music-and-games?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                      - generic [ref=e65]: Books, Music & Games
+                    - link [ref=e66] [cursor=pointer]:
+                      - /url: /collections/books-music-and-games
+                      - text: Books, Music & Games
+                  - listitem [ref=e67]:
+                    - link "Sale & Clearance" [ref=e68] [cursor=pointer]:
+                      - /url: /collections/sale-and-clearance?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                      - generic [ref=e69]: Sale & Clearance
+                    - link [ref=e70] [cursor=pointer]:
+                      - /url: /collections/sale-and-clearance
+                      - text: Sale & Clearance
+                - generic [ref=e73]:
+                  - generic [ref=e74]:
+                    - link "Men" [ref=e75] [cursor=pointer]:
+                      - /url: /collections/men?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                    - link [ref=e76] [cursor=pointer]:
+                      - /url: /collections/men
+                      - text: Men
+                    - list [ref=e77]:
+                      - listitem [ref=e78]:
+                        - link "Outerwear" [ref=e79] [cursor=pointer]:
+                          - /url: /collections/mens-outerwear?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                        - link [ref=e80] [cursor=pointer]:
+                          - /url: /collections/mens-outerwear
+                          - text: Outerwear
+                      - listitem [ref=e81]:
+                        - link "T-Shirts & Tanks" [ref=e82] [cursor=pointer]:
+                          - /url: /collections/mens-t-shirts-and-tanks?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                        - link [ref=e83] [cursor=pointer]:
+                          - /url: /collections/mens-t-shirts-and-tanks
+                          - text: T-Shirts & Tanks
+                      - listitem [ref=e84]:
+                        - link "Sweatshirts" [ref=e85] [cursor=pointer]:
+                          - /url: /collections/mens-sweatshirts?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                        - link [ref=e86] [cursor=pointer]:
+                          - /url: /collections/mens-sweatshirts
+                          - text: Sweatshirts
+                      - listitem [ref=e87]:
+                        - link "Hats" [ref=e88] [cursor=pointer]:
+                          - /url: /collections/mens-hats?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                        - link [ref=e89] [cursor=pointer]:
+                          - /url: /collections/mens-hats
+                          - text: Hats
+                      - listitem [ref=e90]:
+                        - link "Polos" [ref=e91] [cursor=pointer]:
+                          - /url: /collections/mens-polos?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                        - link [ref=e92] [cursor=pointer]:
+                          - /url: /collections/mens-polos
+                          - text: Polos
+                      - listitem [ref=e93]:
+                        - link "Bottoms" [ref=e94] [cursor=pointer]:
+                          - /url: /collections/mens-bottoms?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                        - link [ref=e95] [cursor=pointer]:
+                          - /url: /collections/mens-bottoms
+                          - text: Bottoms
+                      - listitem [ref=e96]:
+                        - link "Sweaters & Woven Shirts" [ref=e97] [cursor=pointer]:
+                          - /url: /collections/mens-sweaters-woven-shirts?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                        - link [ref=e98] [cursor=pointer]:
+                          - /url: /collections/mens-sweaters-woven-shirts
+                          - text: Sweaters & Woven Shirts
+                  - generic [ref=e99]:
+                    - link "Women" [ref=e100] [cursor=pointer]:
+                      - /url: /collections/women?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                    - link [ref=e101] [cursor=pointer]:
+                      - /url: /collections/women
+                      - text: Women
+                    - list [ref=e102]:
+                      - listitem [ref=e103]:
+                        - link "T-Shirts & Tanks" [ref=e104] [cursor=pointer]:
+                          - /url: /collections/womens-t-shirts-and-tanks?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                        - link [ref=e105] [cursor=pointer]:
+                          - /url: /collections/womens-t-shirts-and-tanks
+                          - text: T-Shirts & Tanks
+                      - listitem [ref=e106]:
+                        - link "Sweatshirts" [ref=e107] [cursor=pointer]:
+                          - /url: /collections/womens-sweatshirts?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                        - link [ref=e108] [cursor=pointer]:
+                          - /url: /collections/womens-sweatshirts
+                          - text: Sweatshirts
+                      - listitem [ref=e109]:
+                        - link "Outerwear" [ref=e110] [cursor=pointer]:
+                          - /url: /collections/womens-outerwear?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                        - link [ref=e111] [cursor=pointer]:
+                          - /url: /collections/womens-outerwear
+                          - text: Outerwear
+                      - listitem [ref=e112]:
+                        - link "Bottoms" [ref=e113] [cursor=pointer]:
+                          - /url: /collections/womens-bottoms?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                        - link [ref=e114] [cursor=pointer]:
+                          - /url: /collections/womens-bottoms
+                          - text: Bottoms
+                      - listitem [ref=e115]:
+                        - link "Hats" [ref=e116] [cursor=pointer]:
+                          - /url: /collections/womens-hats?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                        - link [ref=e117] [cursor=pointer]:
+                          - /url: /collections/womens-hats
+                          - text: Hats
+                      - listitem [ref=e118]:
+                        - link "Sweaters & Woven Shirts" [ref=e119] [cursor=pointer]:
+                          - /url: /collections/womens-sweaters-woven-shirts?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                        - link [ref=e120] [cursor=pointer]:
+                          - /url: /collections/womens-sweaters-woven-shirts
+                          - text: Sweaters & Woven Shirts
+                      - listitem [ref=e121]:
+                        - link "Polos" [ref=e122] [cursor=pointer]:
+                          - /url: /collections/womens-polos?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                        - link [ref=e123] [cursor=pointer]:
+                          - /url: /collections/womens-polos
+                          - text: Polos
+                      - listitem [ref=e124]:
+                        - link "Plus Sizes" [ref=e125] [cursor=pointer]:
+                          - /url: /collections/plus-sizes?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                        - link [ref=e126] [cursor=pointer]:
+                          - /url: /collections/plus-sizes
+                          - text: Plus Sizes
+                  - generic [ref=e127]:
+                    - link "Kids" [ref=e128] [cursor=pointer]:
+                      - /url: /collections/kids?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                    - link [ref=e129] [cursor=pointer]:
+                      - /url: /collections/kids
+                      - text: Kids
+                    - list [ref=e130]:
+                      - listitem [ref=e131]:
+                        - link "Infant" [ref=e132] [cursor=pointer]:
+                          - /url: /collections/infant?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                        - link [ref=e133] [cursor=pointer]:
+                          - /url: /collections/infant
+                          - text: Infant
+                      - listitem [ref=e134]:
+                        - link "Toddler" [ref=e135] [cursor=pointer]:
+                          - /url: /collections/toddler?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                        - link [ref=e136] [cursor=pointer]:
+                          - /url: /collections/toddler
+                          - text: Toddler
+                      - listitem [ref=e137]:
+                        - link "Youth" [ref=e138] [cursor=pointer]:
+                          - /url: /collections/youth?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                        - link [ref=e139] [cursor=pointer]:
+                          - /url: /collections/youth
+                          - text: Youth
+                  - generic [ref=e140]:
+                    - link "Accessories" [ref=e141] [cursor=pointer]:
+                      - /url: /collections/clothing-accessories?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                    - link [ref=e142] [cursor=pointer]:
+                      - /url: /collections/clothing-accessories
+                      - text: Accessories
+                    - list [ref=e143]:
+                      - listitem [ref=e144]:
+                        - link "Ties & Bowties" [ref=e145] [cursor=pointer]:
+                          - /url: /collections/ties-and-bowties?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                        - link [ref=e146] [cursor=pointer]:
+                          - /url: /collections/ties-and-bowties
+                          - text: Ties & Bowties
+                      - listitem [ref=e147]:
+                        - link "Hats" [ref=e148] [cursor=pointer]:
+                          - /url: /collections/hats?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                        - link [ref=e149] [cursor=pointer]:
+                          - /url: /collections/hats
+                          - text: Hats
+                      - listitem [ref=e150]:
+                        - link "Backpacks & Bags" [ref=e151] [cursor=pointer]:
+                          - /url: /collections/backpacks-and-bags?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                        - link [ref=e152] [cursor=pointer]:
+                          - /url: /collections/backpacks-and-bags
+                          - text: Backpacks & Bags
+                      - listitem [ref=e153]:
+                        - link "Rain Gear" [ref=e154] [cursor=pointer]:
+                          - /url: /collections/rain-gear?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                        - link [ref=e155] [cursor=pointer]:
+                          - /url: /collections/rain-gear
+                          - text: Rain Gear
+                      - listitem [ref=e156]:
+                        - link "Cold Weather" [ref=e157] [cursor=pointer]:
+                          - /url: /collections/cold-weather?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                        - link [ref=e158] [cursor=pointer]:
+                          - /url: /collections/cold-weather
+                          - text: Cold Weather
+              - link "New Arrivals" [ref=e159] [cursor=pointer]:
+                - /url: /collections/new-arrivals?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                - generic [ref=e160]: New Arrivals
+              - link [ref=e161] [cursor=pointer]:
+                - /url: /collections/new-arrivals
+                - text: New Arrivals
+              - link "Men" [ref=e162] [cursor=pointer]:
+                - /url: /collections/men?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                - generic [ref=e163]: Men
+              - link [ref=e164] [cursor=pointer]:
+                - /url: /collections/men
+                - text: Men
+              - link "Women" [ref=e165] [cursor=pointer]:
+                - /url: /collections/women?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                - generic [ref=e166]: Women
+              - link [ref=e167] [cursor=pointer]:
+                - /url: /collections/women
+                - text: Women
+              - link "Headwear" [ref=e168] [cursor=pointer]:
+                - /url: /collections/hats?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                - generic [ref=e169]: Headwear
+              - link [ref=e170] [cursor=pointer]:
+                - /url: /collections/hats
+                - text: Headwear
+              - link "Gifts" [ref=e171] [cursor=pointer]:
+                - /url: /collections/gifts?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+                - generic [ref=e172]: Gifts
+              - link [ref=e173] [cursor=pointer]:
+                - /url: /collections/gifts
+                - text: Gifts
+              - link "Textbooks" [ref=e174] [cursor=pointer]:
+                - /url: /pages/courses-materials-results
+                - generic [ref=e176]:
+                  - text: Textbooks
+                  - img
+      - generic [ref=e177]:
+        - search "Search" [ref=e180]:
+          - search [ref=e181]:
+            - generic [ref=e183]:
+              - generic:
+                - img
+              - generic [ref=e184]: Search
+              - combobox "Search" [ref=e185]
+        - generic [ref=e186]:
+          - button "Open account menu" [ref=e188] [cursor=pointer]:
+            - img [ref=e190]
+          - 'button "Open bag Total items in bag: 0" [ref=e194] [cursor=pointer]':
+            - generic [ref=e195]:
+              - generic:
+                - img
+              - generic [ref=e196]:
+                - status:
+                  - generic [ref=e198]: "Total items in bag: 0"
+  - main [ref=e199]:
+    - link [ref=e209] [cursor=pointer]:
+      - /url: /collections/t-shirts-and-tanks?filter.v.availability=1&filter.p.tag=has-image&filter.p.tag=adoptedtitle
+    - iframe [ref=e215]:
+      - generic [ref=f39e1]:
+        - link [ref=f39e2] [cursor=pointer]:
+          - /url: https://googleads.g.doubleclick.net/pcs/click?xai=AKAOjss0KCChZEzhUyCK1KHT7ESWog4pSh4z9MGii2H6eCNSWXkWMYfxLsas1mrXahiyj6rf5YHQfz6QqvKngypCt5Kdzm3boClrLMFJcD-Z8P5w-QENdIFztqaSPvALxDlCN3wElsr1fNBCMcFIYyo02WSqx6V5AehRcCDFvxV1M_YBQmSdPcDR06iAykNdvp3JWWrDWzLnA5AMnIzz35DdZSf4XqKGW9pC0ILfs0JFJ0FZOy4PlOF6cXuwBPQnhN5BSvQf5r1r26r3emadtN2SJ43Muw1GifkV1ShxVe_-UB7TFltc95XiagfDE_7RmUWvsEAacIu_7BxZ3PfzYeJ7DMLzV_9CghcEsJVlTsvuhgf8XofvSPiIN09nCSs8BGCELEJDZGY4z7f28uHNWzw9ymvCCvjJ8hMG61Z2HA&sai=AMfl-YQL2FcoSdfsSe04kdhLpzLkdRCdTAZHeIf17YqJER4hbf5Q4ZN0OzN0QmZyWBgbcyNl_H95GmAf38vSzG4qP-HOSuBrcwSKWBy3PmaOyNTNGZ5c45v9EYIrWumbJiYcvgaqrPjndQoaGL-A0mD5YW4E20sQ9tHF3hKNUlFnwlXBd_R2Y3sIK6gf-Qj3ckV1SNeXg3wO_hJaOOxY6tnJAZGIOfO5Y3cj8hf3DiDmllOGrjEAcWEJCtZAL2UnUyj0jRVGHE2iItjzReNW0UngNmYGJh2AgtMDFHmtFMxHhtoNsBi7u6Ff1_-zVMCahpIKRUFiIl4dCTobnVCX7qVKFTOobiE4aV60&sig=Cg0ArKJSzDPNASc5yt6m&fbs_aeid=%5Bgw_fbsaeid%5D&adurl=https://t23h.adj.st%3Fadj_t%3D1iovzpza%26adj_campaign%3DInStore%26adj_adgroup%3DFollettDigital
+        - img [ref=f39e6] [cursor=pointer]
+        - button [ref=f39e9] [cursor=pointer]:
+          - img [ref=f39e10]
+    - generic [ref=e220]:
+      - article [ref=e221]:
+        - heading "The Hound Store" [level=2] [ref=e222]
+        - generic [ref=e224]:
+          - generic [ref=e225]: 500 Salisbury Street
+          - generic [ref=e226]: Hagan Campus Center, Worcester, MA 01609
+        - generic [ref=e227]:
+          - heading "Regular Hours" [level=3] [ref=e228]
+          - generic [ref=e229]:
+            - generic [ref=e230]:
+              - generic [ref=e231]: Monday - Friday
+              - generic [ref=e232]: 9:00am - 4:00pm
+            - generic [ref=e233]:
+              - generic [ref=e234]: Saturday - Sunday
+              - generic [ref=e235]: Closed
+          - generic [ref=e236]: During winter months, if the University closes due to the weather, The Hound Store will also be closed.
+        - generic [ref=e237]:
+          - heading "Accepted Students Week" [level=3] [ref=e238]
+          - generic [ref=e239]:
+            - generic [ref=e240]:
+              - generic [ref=e241]: Monday - Friday
+              - generic [ref=e242]: 9:00am - 4:00pm
+            - generic [ref=e243]:
+              - generic [ref=e244]: Saturday
+              - generic [ref=e245]: 9:00am - 3:00pm
+            - generic [ref=e246]:
+              - generic [ref=e247]: Sunday
+              - generic [ref=e248]: Closed
+          - generic [ref=e249]: Week of March 9, 2026. During winter months, if the University closes due to the weather, The Hound Store will also be closed.
+        - generic [ref=e250]:
+          - heading "Spring Break" [level=3] [ref=e251]
+          - generic [ref=e252]:
+            - generic [ref=e253]:
+              - generic [ref=e254]: Monday - Friday
+              - generic [ref=e255]: 9:00am - 3:00pm
+            - generic [ref=e256]:
+              - generic [ref=e257]: Saturday - Sunday
+              - generic [ref=e258]: Closed
+        - generic [ref=e259]:
+          - img [ref=e260]
+          - link "508-767-5977" [ref=e262] [cursor=pointer]:
+            - /url: tel:5087675977
+      - generic [ref=e263]:
+        - iframe [ref=e264]:
+          
+        - generic [ref=e265]:
+          - img [ref=e267]
+          - link "Open In Maps" [ref=e270] [cursor=pointer]:
+            - /url: https://maps.google.com/?q=500%20Salisbury%20Street%2C%20Hagan%20Campus%20Center%2C%20Worcester%2C%20MA%2001609
+    - iframe [ref=e276]:
+      - generic [ref=f40e1]:
+        - link [ref=f40e2] [cursor=pointer]:
+          - /url: https://googleads.g.doubleclick.net/pcs/click?xai=AKAOjss7Dl5ClF8L-olLmqniwfT7k9_H31jnKQpFy-sG867pY9Kj05-Fee7YagJoPLMR-oQkmR6H0e6kUYlaJJGQy1LGBmo19CedolVaTyRpBKkC53T3vIXkGDeWmyA7dbl9ujv5xKoEncrGQKJzkCQ-FKqGPejazvu5DFfL19p_3Za_MQ3JpXXuu1neX8SVKmqh8HvtZ-OcDifoW4TcA7pXFK1IvO0svFxfpL8tjEr-QGlIJsVa2pNrC1I4ZDTXMreE2KbR_3Tp7sK_ZzTLugnnUSZexINU9Fgcs_KK8Un6oeUkFSCTbPbbpij2lb_ZHeAeoCzwLEOx2C8mXLwr3f3bTrpnjTsT6ox58_XGr6T9PM8po3dNxf7s3EUsgHWUp2V7UD-IT91IWDfRGwB2ifNfnrtcnGRCX281cj5AjziLYA&sai=AMfl-YQMGHnfGtu6iYcbM8JTldC3zqVE0VWv0NJcYvmq8p0doRFjZKh6opIFQbo0FlELzQ1I_o5NR8wcDeJZ2b3NDy9xh-FglmqrKtdtAR63qD3ouhvW2lMtdPBRJHZhQajm5o8cYP9rxmBjmjLfJozB8sn74PmIdXBrtYx5YvKo_1NbXEUm7lcNDZYTOleLCw0ZVc4ijHXq5uQH6eTVNJ7FBlaBAUzekBoqNjQt0YET8_Mu7s9uwax-kywnDGiB6RpCRvNZg8GDRlVtAbycXINmpcXaRZS9TSE8AYVU9ZEeFkx0blKXIFSE0IO4cdin_K2LbWshH2oVTfPFqU-6NZnJkrn8gm4d9MxH&sig=Cg0ArKJSzIw1mVsrP3fV&fbs_aeid=%5Bgw_fbsaeid%5D&adurl=https://t23h.adj.st%3Fadj_t%3D1iovzpza%26adj_campaign%3DInStore%26adj_adgroup%3DFollettDigital
+        - img [ref=f40e6] [cursor=pointer]
+        - button [ref=f40e9] [cursor=pointer]:
+          - img [ref=f40e10]
+  - generic [ref=e280]:
+    - img "Campus logo" [ref=e283]
+    - generic [ref=e285]:
+      - heading "Every purchase directly benefits the campus community." [level=2] [ref=e286]
+      - paragraph [ref=e287]: From student scholarships, to new programs, your dollars make a difference in shaping a brighter academic future.
+  - contentinfo [ref=e288]:
+    - generic [ref=e294]:
+      - generic [ref=e295]:
+        - img "Assumption University" [ref=e297]
+        - generic [ref=e298]:
+          - generic [ref=e299]: Join Our Email List & Get 10% Off
+          - generic [ref=e300]: Get exclusive deals and early access to new products.
+          - generic [ref=e301]:
+            - generic [ref=e302]: Email
+            - generic [ref=e303]:
+              - textbox "Email" [ref=e304]:
+                - /placeholder: Enter your email
+              - button "Subscribe" [ref=e305] [cursor=pointer]
+            - paragraph [ref=e306]:
+              - text: By providing my email, I accept the
+              - link "Terms of Use" [ref=e307] [cursor=pointer]:
+                - /url: https://follett.com/terms-of-use/
+              - text: ","
+              - link "Privacy Policy" [ref=e308] [cursor=pointer]:
+                - /url: https://follett.com/policies/
+              - text: ", and"
+              - link "Cookie Preference Policy" [ref=e309] [cursor=pointer]:
+                - /url: "#"
+              - text: .
+          - generic:
+            - generic:
+              - img
+              - generic: Thanks for subscribing!
+              - button "Close": ×
+      - generic [ref=e310]:
+        - generic [ref=e311]:
+          - heading "Address" [level=3] [ref=e312]
+          - generic [ref=e313]: 500 Salisbury Street, Hagan Campus Center, Worcester, MA 01609
+          - link "508-767-5977" [ref=e315] [cursor=pointer]:
+            - /url: tel:5087675977
+          - link "tcu@bkstr.com" [ref=e317] [cursor=pointer]:
+            - /url: mailto:tcu@bkstr.com
+        - group [ref=e319]:
+          - generic "Company" [ref=e320]:
+            - heading "Company" [level=3] [ref=e321]
+          - list [ref=e323]:
+            - listitem [ref=e324]:
+              - link "View Store Hours" [ref=e325] [cursor=pointer]:
+                - /url: /pages/view-store-hours
+            - listitem [ref=e326]:
+              - link "Contact" [ref=e327] [cursor=pointer]:
+                - /url: /pages/contact
+        - group [ref=e329]:
+          - generic "Textbooks" [ref=e330]:
+            - heading "Textbooks" [level=3] [ref=e331]
+          - list [ref=e333]:
+            - listitem [ref=e334]:
+              - link "Find Your Textbooks" [ref=e335] [cursor=pointer]:
+                - /url: /pages/course-materials-results
+            - listitem [ref=e336]:
+              - link "Sell Your Textbooks" [ref=e337] [cursor=pointer]:
+                - /url: /pages/faq-sell-your-textbooks
+            - listitem [ref=e338]:
+              - link "Textbook FAQs" [ref=e339] [cursor=pointer]:
+                - /url: /pages/faq-textbooks
+            - listitem [ref=e340]:
+              - link "In-Store Price Match Guarantee" [ref=e341] [cursor=pointer]:
+                - /url: /pages/price-match-guarantee
+            - listitem [ref=e342]:
+              - link "Register for Text Rental" [ref=e343] [cursor=pointer]:
+                - /url: /pages/faq-rentals
+        - group [ref=e345]:
+          - generic "Support" [ref=e346]:
+            - heading "Support" [level=3] [ref=e347]
+          - list [ref=e349]:
+            - listitem [ref=e350]:
+              - link "Track an Order" [ref=e351] [cursor=pointer]:
+                - /url: /account/orders
+            - listitem [ref=e352]:
+              - link "Delivery Options" [ref=e353] [cursor=pointer]:
+                - /url: /pages/faq-shipping-delivery
+            - listitem [ref=e354]:
+              - link "Payments Accepted" [ref=e355] [cursor=pointer]:
+                - /url: /pages/faq-orders
+            - listitem [ref=e356]:
+              - link "Returns" [ref=e357] [cursor=pointer]:
+                - /url: /pages/faq-online-return-policy
+            - listitem [ref=e358]:
+              - link "Help/FAQ" [ref=e359] [cursor=pointer]:
+                - /url: /pages/faq
+            - listitem [ref=e360]:
+              - link "Accessibility" [ref=e361] [cursor=pointer]:
+                - /url: /pages/faq-accessibility-browser-support
+      - generic [ref=e363]:
+        - generic [ref=e364]: © 2026 Follett Higher Education
+        - generic [ref=e365]:
+          - link "Terms of Use" [ref=e366] [cursor=pointer]:
+            - /url: https://follett.com/terms-of-use/
+          - link "Privacy Policy" [ref=e367] [cursor=pointer]:
+            - /url: https://follett.com/policies/
+          - link "Do Not Sell My Info – CA" [ref=e368] [cursor=pointer]:
+            - /url: https://privacyportal-cdn.onetrust.com/dsarwebform/d874582a-c10e-4b93-bdba-7f74cfaded74/c11baae7-b240-4c76-bea2-737c15a7fb2a.html
+          - link "Cookie Preference Policy" [ref=e369] [cursor=pointer]:
+            - /url: javascript:OneTrust.ToggleInfoDisplay()
+        - link "Site Map" [ref=e371] [cursor=pointer]:
+          - /url: /pages/sitemap
+```

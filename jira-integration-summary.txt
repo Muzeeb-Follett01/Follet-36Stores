@@ -1,0 +1,88 @@
+===============================================================================
+  JIRA ZEPHYR SQUAD INTEGRATION — SUMMARY
+===============================================================================
+
+PURPOSE:
+  Automate uploading Playwright test results (screenshots & videos) to Jira
+  Zephyr Squad test executions inside a test cycle.
+
+FLOW:
+  1. Script reads test-results/{storeId}/ folder (e.g. test-results/0026/)
+  2. Each subfolder name (e.g. TMSHOP-455) maps to a Jira test case key
+  3. Connects to Jira Server (jira.follett.com) using Personal Access Token
+  4. Finds the target test cycle (default: "Test01") under "Unscheduled"
+  5. Creates a test execution for each TMSHOP-XXX in the cycle
+  6. Uploads all .png screenshots and .webm videos to each execution
+
+===============================================================================
+  FILES CREATED / MODIFIED
+===============================================================================
+
+  jira.env                    — Jira credentials config
+                                (base URL, project key, username, PAT token)
+
+  scripts/jiraAttach.ts       — Main script: connects to Zephyr Squad API,
+                                creates executions, uploads attachments
+
+  scripts/commands.txt        — Updated with the run command for reference
+
+===============================================================================
+  CONFIGURATION (jira.env)
+===============================================================================
+
+  JIRA_BASE_URL    = https://jira.follett.com
+  JIRA_PROJECT_KEY = TMSHOP
+  JIRA_USERNAME    = smuzeeb
+  JIRA_API_TOKEN   = <Personal Access Token>
+
+===============================================================================
+  HOW TO RUN
+===============================================================================
+
+  # All test cases for a store:
+  npx ts-node --transpile-only scripts/jiraAttach.ts 0026
+
+  # Single test case only:
+  npx ts-node --transpile-only scripts/jiraAttach.ts 0026 TMSHOP-455
+
+  # Different cycle name:
+  npx ts-node --transpile-only scripts/jiraAttach.ts 0026 ALL "MyCycle"
+
+===============================================================================
+  EXECUTION RESULTS — Store 0026 (April 9, 2026)
+===============================================================================
+
+  Project:  TMSHOP (ID: 12852)
+  Cycle:    Test01 (ID: 1230) under Unscheduled
+  Total:    12 test cases, 64 attachments (52 screenshots + 12 videos)
+
+  Test Case     | Summary                                        | Exec ID | Files
+  ------------- | ---------------------------------------------- | ------- | -----
+  TMSHOP-450    | E2E001 | FMS Standalone - Basic Flow           | 169817  |   5
+  TMSHOP-453    | E2E018 | FMS Standalone - Checkout/Delivery    | 169818  |   4
+  TMSHOP-454    | E2E015 | FMS Standalone - User Account(Rental) | 169819  |   3
+  TMSHOP-455    | E2E005 | FMS Standalone - Header/Footer links  | 169820  |   2
+  TMSHOP-456    | E2E003 | FMS Standalone - PDP Browse/Search    | 169821  |   6
+  TMSHOP-457    | E2E004 | FMS Standalone - Taxonomy Static      | 169822  |  20
+  TMSHOP-458    | (test case)                                    | 169823  |   6
+  TMSHOP-459    | (test case)                                    | 169824  |   2
+  TMSHOP-460    | (test case)                                    | 169825  |   3
+  TMSHOP-461    | (test case)                                    | 169826  |   3
+  TMSHOP-462    | (test case)                                    | 169827  |   3
+  TMSHOP-463    | (test case)                                    | 169828  |   7
+  ------------- | ---------------------------------------------- | ------- | -----
+  TOTAL         |                                                |         |  64
+
+===============================================================================
+  JIRA APIs USED
+===============================================================================
+
+  GET  /rest/api/2/project/{key}                  — Get project ID
+  GET  /rest/zapi/latest/cycle?projectId=&ver...  — List test cycles
+  POST /rest/zapi/latest/execution                — Create test execution
+  POST /rest/zapi/latest/attachment?entityId=...   — Upload attachment to execution
+  GET  /rest/zapi/latest/attachment/attachments... — Verify attachments (read)
+
+  Authentication: Bearer token (Jira Personal Access Token)
+
+===============================================================================

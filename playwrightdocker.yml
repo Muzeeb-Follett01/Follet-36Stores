@@ -1,0 +1,36 @@
+trigger:
+  - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+jobs:
+  - job: playwright_tests
+    displayName: 'Run Playwright Tests in Docker'
+    steps:
+      - task: NodeTool@0
+        inputs:
+          versionSpec: '18.x'
+        displayName: 'Install Node.js'
+
+      - script: |
+          npm init -y
+          npm install -D @playwright/test
+          npx playwright install
+        displayName: 'Install Playwright Dependencies'
+
+      - script: |
+          docker run --rm \
+            -v $(System.DefaultWorkingDirectory):/tests \
+            -w /tests \
+            mcr.microsoft.com/playwright:v1.56.1-noble \
+            npx playwright test ./tests/tdd/web.spec.ts -g "web testing"
+        displayName: 'Run Playwright Tests in Container'
+
+      - task: PublishBuildArtifacts@1
+        inputs:
+          pathToPublish: 'playwright-report'
+          artifactName: 'TestReport'
+          publishLocation: 'Container'
+        displayName: 'Publish Playwright HTML Report'
+        condition: always()
