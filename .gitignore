@@ -20,3 +20,7 @@ node_modules/
 
 # Credentials
 jira.env
+
+# Docs - exclude from org repo
+README.md
+USERGUIDE.md
