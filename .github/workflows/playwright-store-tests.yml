@@ -4,14 +4,10 @@ on:
   # Manual trigger with inputs
   workflow_dispatch:
     inputs:
-      store_id:
-        description: "Store ID (4-digit, e.g. 0026)"
+      store_ids:
+        description: "Store IDs — comma-separated (e.g. 0026,0029,0030,0031,0032)"
         required: true
         default: "0026"
-      excel_file:
-        description: "Excel file name (e.g. bkstr-0026.xlsx)"
-        required: true
-        default: "bkstr-0026.xlsx"
       browser:
         description: "Browser to use"
         required: true
@@ -32,10 +28,28 @@ env:
   NODE_OPTIONS: ""
 
 jobs:
+  # Convert comma-separated store IDs into a JSON array for matrix
+  prepare:
+    name: Prepare store list
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+    steps:
+      - name: Build matrix from input
+        id: set-matrix
+        run: |
+          STORES=$(echo "${{ github.event.inputs.store_ids }}" | tr -d ' ' | jq -R -c 'split(",")')
+          echo "matrix={\"store_id\":$STORES}" >> $GITHUB_OUTPUT
+
   playwright-tests:
-    name: "Store ${{ github.event.inputs.store_id }} — 12 Specs"
+    name: "Store ${{ matrix.store_id }} — 12 Specs"
+    needs: prepare
     runs-on: windows-latest
     timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      max-parallel: 5
+      matrix: ${{ fromJson(needs.prepare.outputs.matrix) }}
 
     steps:
       - name: Checkout code
@@ -73,16 +87,16 @@ jobs:
             --reporter=dot,junit,html
         env:
           CI: true
-          EXCEL_FILE: ${{ github.event.inputs.excel_file }}
+          EXCEL_FILE: bkstr-${{ matrix.store_id }}.xlsx
         continue-on-error: true
 
       - name: Upload test results
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: test-results-${{ github.event.inputs.store_id }}
+          name: test-results-${{ matrix.store_id }}
           path: |
-            test-results/${{ github.event.inputs.store_id }}/
+            test-results/${{ matrix.store_id }}/
             playwright-report/
             notify-results/test-results.xml
           retention-days: 30
@@ -91,8 +105,8 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: screenshots-videos-${{ github.event.inputs.store_id }}
-          path: test-results/${{ github.event.inputs.store_id }}/
+          name: screenshots-videos-${{ matrix.store_id }}
+          path: test-results/${{ matrix.store_id }}/
           retention-days: 30
 
       - name: Verify Jira credentials
@@ -113,7 +127,7 @@ jobs:
         if: github.event.inputs.upload_to_jira == 'true' && always()
         continue-on-error: true
         run: |
-          npx ts-node --transpile-only scripts/jiraAttach.ts ${{ github.event.inputs.store_id }}
+          npx ts-node --transpile-only scripts/jiraAttach.ts ${{ matrix.store_id }}
         env:
           JIRA_BASE_URL: ${{ secrets.JIRA_BASE_URL }}
           JIRA_PROJECT_KEY: TMSHOP
@@ -124,7 +138,7 @@ jobs:
         if: always()
         uses: dorny/test-reporter@v1
         with:
-          name: "Playwright Results — Store ${{ github.event.inputs.store_id }}"
+          name: "Playwright Results — Store ${{ matrix.store_id }}"
           path: notify-results/test-results.xml
           reporter: java-junit
           fail-on-error: false
